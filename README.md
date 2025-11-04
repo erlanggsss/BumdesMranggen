@@ -1,144 +1,93 @@
-# React
+# BUMDes Mranggen - Official Landing Page
 
-A modern React-based project utilizing the latest frontend technologies and tools for building responsive web applications.
+![BUMDes Mranggen](./public/bumdes-hero.png)
 
-## 🚀 Features
+This is the official responsive landing page for **BUMDes (Badan Usaha Milik Desa) Makmur Sejahtera Mranggen**. The website is designed to be a modern, professional, and informative digital presence for the organization, showcasing its mission, business units, products, and contact information to the public.
 
-- **React 18** - React version with improved rendering and concurrent features
-- **Vite** - Lightning-fast build tool and development server
-- **Redux Toolkit** - State management with simplified Redux setup
-- **TailwindCSS** - Utility-first CSS framework with extensive customization
-- **React Router v6** - Declarative routing for React applications
-- **Data Visualization** - Integrated D3.js and Recharts for powerful data visualization
-- **Form Management** - React Hook Form for efficient form handling
-- **Animation** - Framer Motion for smooth UI animations
-- **Testing** - Jest and React Testing Library setup
+**Live Demo URL:** [https://erlanggsss.github.io/BumdesMranggen/](https://erlanggsss.github.io/BumdesMranggen/)
 
-## 📋 Prerequisites
+---
 
-- Node.js (v14.x or higher)
-- npm or yarn
+## ✨ Key Features
 
-## 🛠️ Installation
+- **Fully Responsive Design**: Optimized for a seamless experience on desktops, tablets, and mobile devices.
+- **Interactive Sections**:
+  - **Business Units**: An expandable card interface to display details, key metrics, and services for each unit (Agriculture, Tourism, UMKM, etc.).
+  - **Locations**: An interactive map section allowing users to switch between different office/unit locations, view details, and get directions via Google Maps.
+- **Smooth Scrolling Navigation**: A sticky header and smooth scroll-to-section functionality for easy navigation.
+- **Dynamic Content**: Data for business units, locations, and links are stored in arrays, making it easy to update and maintain.
+- **"Click-to-Action" Integrations**:
+  - **WhatsApp Chat**: Pre-filled messages to easily contact different business units or customer service.
+  - **Google Maps**: "Get Directions" buttons that open Google Maps with the destination pre-set.
+- **Modern UI/UX**: Built with Tailwind CSS for a clean, utility-first design, featuring custom components, icons, and a consistent color scheme.
 
-1. Install dependencies:
+---
 
-   ```bash
+## 🛠️ Tech Stack
 
-   npm install
+This project is built with a modern frontend stack:
 
-   # or
+- **[React](https://reactjs.org/)**: A JavaScript library for building user interfaces.
+- **[Vite](https://vitejs.dev/)**: A next-generation frontend tooling that provides a faster and leaner development experience.
+- **[Tailwind CSS](https://tailwindcss.com/)**: A utility-first CSS framework for rapid UI development.
+- **[Lucide React](https://lucide.dev/)**: A beautiful and consistent icon toolkit.
 
-   yarn install
+---
 
-   ```
-2. Start the development server:
+## 🚀 Getting Started
 
-   ```bash
+To get a local copy up and running, follow these simple steps.
 
-   npm start
+### Prerequisites
 
-   # or
+Make sure you have Node.js and npm (or yarn) installed on your machine.
+- [Node.js](https://nodejs.org/en/) (v18.x or later recommended)
+- `npm` or `yarn`
 
-   yarn start
+### Installation & Setup
 
-   ```
+1.  **Clone the repository:**
+    ```sh
+    git clone https://github.com/erlanggsss/BumdesMranggen.git
+    ```
+
+2.  **Navigate to the project directory:**
+    ```sh
+    cd BumdesMranggen
+    ```
+
+3.  **Install NPM packages:**
+    ```sh
+    npm install
+    ```
+
+4.  **Run the development server:**
+    ```sh
+    npm run dev
+    ```
+
+Open http://localhost:5173 (or the address shown in your terminal) with your browser to see the result.
+
+---
 
 ## 📁 Project Structure
 
-```
-
-react_app/
-
-├── public/             # Static assets
-
-├── src/
-
-│   ├── components/     # Reusable UI components
-
-│   ├── pages/          # Page components
-
-│   ├── styles/         # Global styles and Tailwind configuration
-
-│   ├── App.jsx         # Main application component
-
-│   ├── Routes.jsx      # Application routes
-
-│   └── index.jsx       # Application entry point
-
-├── .env                # Environment variables
-
-├── index.html          # HTML template
-
-├── package.json        # Project dependencies and scripts
-
-├── tailwind.config.js  # Tailwind CSS configuration
-
-└── vite.config.js      # Vite configuration
+The project follows a standard React application structure:
 
 ```
-
-## 🧩 Adding Routes
-
-To add new routes to the application, update the `Routes.jsx` file:
-
-```jsx
-
-import { useRoutes } from "react-router-dom";
-
-import HomePage from "pages/HomePage";
-
-import AboutPage from "pages/AboutPage";
-
-
-const ProjectRoutes = () => {
-
-  let element = useRoutes([
-
-    { path: "/", element: <HomePage /> },
-
-    { path: "/about", element: <AboutPage /> },
-
-    // Add more routes as needed
-
-  ]);
-
-
-  return element;
-
-};
-
+src/
+├── components/       # Shared, reusable components (AppIcon, AppImage, ui/Button)
+├── pages/            # Page-level components
+│   └── landing-page/ # Main landing page and its sections
+├── styles/           # Global styles and Tailwind CSS configuration
+├── App.jsx           # Main application component
+└── index.jsx         # Entry point of the React application
 ```
 
-## 🎨 Styling
+---
 
-This project uses Tailwind CSS for styling. The configuration includes:
+## 👤 Contact
 
-- Forms plugin for form styling
-- Typography plugin for text styling
-- Aspect ratio plugin for responsive elements
-- Container queries for component-specific responsive design
-- Fluid typography for responsive text
-- Animation utilities
+Erlangga - @erlanggsss
 
-## 📱 Responsive Design
-
-The app is built with responsive design using Tailwind CSS breakpoints.
-
-## 📦 Deployment
-
-Build the application for production:
-
-```bash
-
-npm run build
-
-```
-
-## 🙏 Acknowledgments
-
-- Built with [Rocket.new](https://rocket.new)
-- Powered by React and Vite
-- Styled with Tailwind CSS
-
-Built with ❤️ on Rocket.new
+Project Link: https://github.com/erlanggsss/BumdesMranggen
