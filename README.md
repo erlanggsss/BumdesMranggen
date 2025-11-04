@@ -1,6 +1,6 @@
 # BUMDes Mranggen - Official Landing Page
 
-![BUMDes Mranggen](./public/bumdes-hero.png)
+![BUMDes Mranggen](./public/assets/image.png)
 
 This is the official responsive landing page for **BUMDes (Badan Usaha Milik Desa) Makmur Sejahtera Mranggen**. The website is designed to be a modern, professional, and informative digital presence for the organization, showcasing its mission, business units, products, and contact information to the public.
 
@@ -85,9 +85,3 @@ src/
 ```
 
 ---
-
-## 👤 Contact
-
-Erlangga - @erlanggsss
-
-Project Link: https://github.com/erlanggsss/BumdesMranggen
