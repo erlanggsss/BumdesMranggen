@@ -4,7 +4,7 @@
 
 This is the official responsive landing page for **BUMDes (Badan Usaha Milik Desa) Makmur Sejahtera Mranggen**. The website is designed to be a modern, professional, and informative digital presence for the organization, showcasing its mission, business units, products, and contact information to the public.
 
-**Live Demo URL:** [https://erlanggsss.github.io/BumdesMranggen/](https://erlanggsss.github.io/BumdesMranggen/)
+**Live Demo URL:** Under Development
 
 ---
 
