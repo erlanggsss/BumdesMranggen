@@ -15,7 +15,7 @@ const TestimonialsSection = () => {
     role: 'Petani & Anggota BUMDes',
     image: "https://images.unsplash.com/photo-1449595360759-ed590fcf63ed",
     imageAlt: 'Indonesian village woman farmer in traditional clothing with warm smile and agricultural background',
-    content: `Sejak bergabung dengan BUMDes Mranggen, pendapatan keluarga saya meningkat 200%. Program pelatihan pertanian organik sangat membantu meningkatkan kualitas hasil panen. Sekarang produk saya bisa dijual dengan harga yang lebih baik.`,
+    content: `Sejak bergabung dengan BUMDes Surya Buana, pendapatan keluarga saya meningkat 200%. Program pelatihan pertanian organik sangat membantu meningkatkan kualitas hasil panen. Sekarang produk saya bisa dijual dengan harga yang lebih baik.`,
     rating: 5,
     location: 'Desa Mranggen',
     joinedYear: '2020',
@@ -28,7 +28,7 @@ const TestimonialsSection = () => {
     role: 'Direktur PT. Agro Sejahtera',
     image: "https://images.unsplash.com/photo-1723990720514-65968a7d517b",
     imageAlt: 'Professional Indonesian businessman in formal suit with confident expression in modern office setting',
-    content: `Kemitraan dengan BUMDes Mranggen sangat menguntungkan. Mereka konsisten dalam kualitas produk dan tepat waktu dalam pengiriman. Tim manajemen yang profesional membuat kerjasama berjalan lancar dan saling menguntungkan.`,
+    content: `Kemitraan dengan BUMDes Surya Buana sangat menguntungkan. Mereka konsisten dalam kualitas produk dan tepat waktu dalam pengiriman. Tim manajemen yang profesional membuat kerjasama berjalan lancar dan saling menguntungkan.`,
     rating: 5,
     location: 'Jakarta',
     partnershipYear: '2021',
@@ -54,7 +54,7 @@ const TestimonialsSection = () => {
     role: 'Manager Hotel Santika',
     image: "https://images.unsplash.com/photo-1660609389476-c961a2a11d40",
     imageAlt: 'Professional Indonesian hotel manager in business attire with hospitality industry background and welcoming smile',
-    content: `Paket wisata desa dari BUMDes Mranggen menjadi favorit tamu hotel kami. Pengalaman autentik yang ditawarkan sangat berkesan. Kerjasama ini membuka peluang wisata alternatif yang unik dan berkualitas tinggi.`,
+    content: `Paket wisata desa dari BUMDes Surya Buana menjadi favorit tamu hotel kami. Pengalaman autentik yang ditawarkan sangat berkesan. Kerjasama ini membuka peluang wisata alternatif yang unik dan berkualitas tinggi.`,
     rating: 5,
     location: 'Semarang',
     partnershipYear: '2022',
@@ -80,7 +80,7 @@ const TestimonialsSection = () => {
     role: 'Kepala Dinas Koperasi & UMKM',
     image: "https://images.unsplash.com/photo-1552666135-049975564f65",
     imageAlt: 'Indonesian government official in formal attire with professional demeanor and government office background',
-    content: `BUMDes Mranggen menjadi model percontohan di tingkat kabupaten. Transparansi pengelolaan dan dampak positif terhadap ekonomi masyarakat sangat luar biasa. Ini adalah contoh nyata keberhasilan program pemberdayaan ekonomi desa.`,
+    content: `BUMDes Surya Buana menjadi model percontohan di tingkat kabupaten. Transparansi pengelolaan dan dampak positif terhadap ekonomi masyarakat sangat luar biasa. Ini adalah contoh nyata keberhasilan program pemberdayaan ekonomi desa.`,
     rating: 5,
     location: 'Kabupaten Demak',
     partnershipYear: '2020',
@@ -127,7 +127,7 @@ const TestimonialsSection = () => {
             Testimoni Masyarakat
           </h2>
           <p className="font-inter text-lg text-gray-600 max-w-3xl mx-auto">
-            Dengarkan langsung pengalaman dan kesuksesan masyarakat serta mitra bisnis yang telah bergabung dengan BUMDes Mranggen
+            Dengarkan langsung pengalaman dan kesuksesan masyarakat serta mitra bisnis yang telah bergabung dengan BUMDes Surya Buana
           </p>
         </div>
 
@@ -287,7 +287,7 @@ const TestimonialsSection = () => {
               Bergabunglah dengan Kisah Sukses Kami
             </h3>
             <p className="font-inter text-white/90 mb-6 max-w-2xl mx-auto">
-              Jadilah bagian dari komunitas BUMDes Mranggen dan rasakan sendiri dampak positifnya bagi kehidupan dan usaha Anda
+              Jadilah bagian dari komunitas BUMDes Surya Buana dan rasakan sendiri dampak positifnya bagi kehidupan dan usaha Anda
             </p>
             <Button
               variant="outline"

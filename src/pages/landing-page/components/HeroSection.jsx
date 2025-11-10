@@ -48,7 +48,7 @@ const HeroSection = () => {
           {/* Main Headline - Responsive typography */}
           <h1 className="font-poppins font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 sm:mb-6 leading-tight">
             Membangun Kemakmuran Desa Bersama{' '}
-            <span className="text-primary block sm:inline mt-2 sm:mt-0">BUMDes Mranggen</span>
+            <span className="text-primary block sm:inline mt-2 sm:mt-0">BUMDes Surya Buana</span>
           </h1>
 
           {/* Supporting Subheadline - Responsive text */}

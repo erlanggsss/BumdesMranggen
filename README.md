@@ -41,30 +41,32 @@ To get a local copy up and running, follow these simple steps.
 ### Prerequisites
 
 Make sure you have Node.js and npm (or yarn) installed on your machine.
+
 - [Node.js](https://nodejs.org/en/) (v18.x or later recommended)
 - `npm` or `yarn`
 
 ### Installation & Setup
 
-1.  **Clone the repository:**
-    ```sh
-    git clone https://github.com/erlanggsss/BumdesMranggen.git
-    ```
+1. **Clone the repository:**
 
-2.  **Navigate to the project directory:**
-    ```sh
-    cd BumdesMranggen
-    ```
+   ```sh
+   git clone https://github.com/erlanggsss/BumdesMranggen.git
+   ```
+2. **Navigate to the project directory:**
 
-3.  **Install NPM packages:**
-    ```sh
-    npm install
-    ```
+   ```sh
+   cd BumdesMranggen
+   ```
+3. **Install NPM packages:**
 
-4.  **Run the development server:**
-    ```sh
-    npm run dev
-    ```
+   ```sh
+   npm install
+   ```
+4. **Run the development server:**
+
+   ```sh
+   npm start
+   ```
 
 Open http://localhost:5173 (or the address shown in your terminal) with your browser to see the result.
 

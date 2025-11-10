@@ -11,7 +11,7 @@ const ProgramsTimelineSection = () => {
     id: 1,
     year: '2019',
     title: 'Pendirian BUMDes',
-    description: 'Pembentukan BUMDes Makmur Sejahtera dengan modal awal dari pemerintah desa',
+    description: 'Pembentukan BUMDes Surya Buana dengan modal awal dari pemerintah desa',
     impact: 'Modal awal Rp 500 juta',
     beforeImage: "https://images.unsplash.com/photo-1559449820-e2f3e79d4b75",
     beforeImageAlt: 'Empty village land before BUMDes development with basic infrastructure and few economic activities',
@@ -109,7 +109,7 @@ const ProgramsTimelineSection = () => {
             Program Pengembangan
           </h2>
           <p className="font-inter text-lg text-gray-600 max-w-3xl mx-auto">
-            Perjalanan transformasi BUMDes Mranggen dalam membangun ekonomi desa yang berkelanjutan dan berdampak positif bagi masyarakat
+            Perjalanan transformasi BUMDes Surya Buana dalam membangun ekonomi desa yang berkelanjutan dan berdampak positif bagi masyarakat
           </p>
         </div>
 

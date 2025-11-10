@@ -136,7 +136,7 @@ const ProductGallerySection = () => {
             Produk & Layanan
           </h2>
           <p className="font-inter text-lg text-gray-600 max-w-3xl mx-auto">
-            Berbagai produk berkualitas dan layanan unggulan dari BUMDes Mranggen yang siap memenuhi kebutuhan masyarakat
+            Berbagai produk berkualitas dan layanan unggulan dari BUMDes Surya Buana yang siap memenuhi kebutuhan masyarakat
           </p>
         </div>
 

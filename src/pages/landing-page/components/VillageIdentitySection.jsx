@@ -34,10 +34,10 @@ const VillageIdentitySection = () => {
           <div className="space-y-8">
             <div>
               <h2 className="font-poppins font-bold text-3xl sm:text-4xl lg:text-5xl text-primary mb-6">
-                Tentang BUMDes Mranggen
+                Tentang BUMDes Surya Buana
               </h2>
               <p className="font-inter text-lg text-gray-700 leading-relaxed mb-6">
-                BUMDes Makmur Sejahtera didirikan pada tahun 2019 dengan visi menjadi motor penggerak ekonomi desa yang berkelanjutan. Kami berkomitmen untuk memberdayakan masyarakat melalui berbagai unit usaha yang mengoptimalkan potensi lokal.
+                BUMDes Surya Buana didirikan pada tahun 2019 dengan visi menjadi motor penggerak ekonomi desa yang berkelanjutan. Kami berkomitmen untuk memberdayakan masyarakat melalui berbagai unit usaha yang mengoptimalkan potensi lokal.
               </p>
               <p className="font-inter text-lg text-gray-700 leading-relaxed">
                 Dengan dukungan penuh pemerintah desa dan partisipasi aktif masyarakat, kami telah berhasil menciptakan ekosistem bisnis yang menguntungkan semua pihak dan berkontribusi nyata terhadap peningkatan kesejahteraan warga.
@@ -90,7 +90,7 @@ const VillageIdentitySection = () => {
                   <Icon name="Calendar" size={28} color="white" />
                 </div>
                 <div>
-                  <p className="font-poppins font-bold text-2xl text-gray-900">5+</p>
+                  <p className="font-poppins font-bold text-2xl text-gray-900">6+</p>
                   <p className="font-inter text-sm text-gray-600">Tahun Beroperasi</p>
                 </div>
               </div>

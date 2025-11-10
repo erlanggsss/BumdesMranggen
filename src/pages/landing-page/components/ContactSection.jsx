@@ -337,7 +337,7 @@ const ContactSection = () => {
                       variant="outline"
                       size="sm"
                       onClick={() => {
-                        const message = encodeURIComponent('Halo! Saya ingin mengetahui lebih lanjut tentang BUMDes Mranggen.');
+                        const message = encodeURIComponent('Halo! Saya ingin mengetahui lebih lanjut tentang BUMDes Surya Buana.');
                         const whatsappUrl = `https://wa.me/6281234567890?text=${message}`;
                         window.open(whatsappUrl, '_blank');
                       }}
