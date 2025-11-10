@@ -106,32 +106,35 @@ const AnchorNavigation = ({
       
       {/* Mobile Menu - Full-screen overlay on small screens */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-14 sm:top-16 bg-white z-40 overflow-y-auto">
-          <div className="px-4 py-6 space-y-2">
-            {navigationItems?.map((item) => {
-              const isActive = activeSection === item?.href?.substring(1);
-              return (
-                <button
-                  key={item?.href}
-                  onClick={() => handleNavClick(item?.href)}
-                  className={`w-full flex items-center space-x-4 px-4 py-4 rounded-lg text-left font-inter font-medium text-base transition-colors duration-250 min-h-12 ${
-                    isActive 
-                      ? 'text-primary bg-primary/10' :'text-gray-700 hover:text-primary hover:bg-gray-50'
-                  }`}
-                >
-                  <Icon name={item?.icon} size={20} />
-                  <span>{item?.label}</span>
-                </button>
-              );
-            })}
-          </div>
-          
-          {/* Close overlay when tapping outside */}
+        <>
+          {/* Backdrop overlay */}
           <div 
-            className="absolute inset-0 bg-black/20 backdrop-blur-sm -z-10"
+            className="lg:hidden fixed inset-0 top-14 sm:top-16 bg-black/20 backdrop-blur-sm z-30"
             onClick={() => setIsMobileMenuOpen(false)}
           />
-        </div>
+          
+          {/* Menu content */}
+          <div className="lg:hidden fixed inset-0 top-14 sm:top-16 bg-white z-40 overflow-y-auto">
+            <div className="px-4 py-6 space-y-2">
+              {navigationItems?.map((item) => {
+                const isActive = activeSection === item?.href?.substring(1);
+                return (
+                  <button
+                    key={item?.href}
+                    onClick={() => handleNavClick(item?.href)}
+                    className={`w-full flex items-center space-x-4 px-4 py-4 rounded-lg text-left font-inter font-medium text-base transition-colors duration-250 min-h-12 ${
+                      isActive 
+                        ? 'text-primary bg-primary/10' :'text-gray-700 hover:text-primary hover:bg-gray-50'
+                    }`}
+                  >
+                    <Icon name={item?.icon} size={20} />
+                    <span>{item?.label}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </>
       )}
     </nav>
   );

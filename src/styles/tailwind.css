@@ -57,19 +57,45 @@
     --color-surface: #F5F5DC; /* beige */
     --color-surface-foreground: #1F2937; /* gray-800 */
   }
+}
+
+@layer base {
   * {
-    @apply border-border;
+    border-color: var(--color-border);
   }
+  
   body {
-    @apply bg-background text-foreground;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
     font-family: 'Inter', sans-serif;
   }
+  
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
   }
 }
 
 @layer utilities {
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .text-primary-custom {
+    color: var(--color-text-primary);
+  }
+  
+  .text-secondary-custom {
+    color: var(--color-text-secondary);
+  }
+  
+  .bg-surface {
+    background-color: var(--color-surface);
+  }
+  
   .smooth-scroll {
     scroll-behavior: smooth;
   }

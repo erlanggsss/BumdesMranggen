@@ -1,12 +1,12 @@
 import React from 'react';
-import AnchorNavigation from '../../components/ui/AnchorNavigation';
+import AnchorNavigation from '../../components/ui/AnchorNavigationIndicator';
 import WhatsAppFloatingButton from '../../components/ui/WhatsAppFloatingButton';
 import ScrollProgressIndicator from '../../components/ui/ScrollProgressIndicator';
 
 // Import all components
 import HeroSection from './components/HeroSection';
 import VillageIdentitySection from './components/VillageIdentitySection';
-import BusinessUnitsSection from './components/BusinessUnitsSection';
+import BusinessUnitsSection from './components/BussinessUnitsSection';
 import ProgramsTimelineSection from './components/ProgramsTimelineSection';
 import LeadershipTeamSection from './components/LeadershipTeamSection';
 import LocationSection from './components/LocationSection';
