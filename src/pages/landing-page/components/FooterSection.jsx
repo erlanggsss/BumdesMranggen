@@ -61,7 +61,7 @@ const FooterSection = () => {
   };
 
   const handleWhatsAppContact = () => {
-    const message = encodeURIComponent('Halo! Saya tertarik untuk mengetahui lebih lanjut tentang BUMDes Surya Buana.');
+    const message = encodeURIComponent('Halo! Saya tertarik untuk mengetahui lebih lanjut tentang BUMDes Gotong Royong Sejahtera.');
     const whatsappUrl = `https://wa.me/6281234567890?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -72,10 +72,10 @@ const FooterSection = () => {
       <div className="bg-primary py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="font-poppins font-bold text-2xl sm:text-3xl text-white mb-4">
-            Dapatkan Update Terbaru BUMDes Surya Buana
+            Dapatkan Update Terbaru BUMDes Gotong Royong Sejahtera
           </h3>
           <p className="font-inter text-white/90 mb-8 max-w-2xl mx-auto">
-            Berlangganan newsletter kami untuk mendapatkan informasi terbaru tentang program, produk, dan perkembangan BUMDes Surya Buana
+            Berlangganan newsletter kami untuk mendapatkan informasi terbaru tentang program, produk, dan perkembangan BUMDes Gotong Royong Sejahtera
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
@@ -217,7 +217,7 @@ const FooterSection = () => {
             {/* Copyright */}
             <div className="text-center md:text-left">
               <p className="font-inter text-gray-400 text-sm">
-                © {currentYear} BUMDes Surya Buana. Seluruh hak cipta dilindungi undang-undang.
+                © {currentYear} BUMDes Gotong Royong Sejahtera. Seluruh hak cipta dilindungi undang-undang.
               </p>
             </div>
 

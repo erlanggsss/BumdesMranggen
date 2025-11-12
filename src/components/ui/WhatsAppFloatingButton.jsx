@@ -9,7 +9,7 @@ const WhatsAppFloatingButton = ({
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent(
-      "Halo BUMDes Surya Buana! Saya tertarik untuk mengetahui lebih lanjut tentang produk dan layanan yang tersedia."
+      "Halo BUMDes Gotong Royong Sejahtera! Saya tertarik untuk mengetahui lebih lanjut tentang produk dan layanan yang tersedia."
     );
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank');

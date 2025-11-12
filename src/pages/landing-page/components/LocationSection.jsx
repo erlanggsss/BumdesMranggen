@@ -75,7 +75,7 @@ const LocationSection = () => {
   const currentLocation = locations?.find(loc => loc?.id === activeLocation);
 
   const handleWhatsAppContact = (phone, locationName) => {
-    const message = encodeURIComponent(`Halo! Saya ingin mengetahui lebih lanjut tentang layanan di ${locationName} BUMDes Surya Buana.`);
+    const message = encodeURIComponent(`Halo! Saya ingin mengetahui lebih lanjut tentang layanan di ${locationName} BUMDes Gotong Royong Sejahtera.`);
     const whatsappUrl = `https://wa.me/${phone?.replace(/[^0-9]/g, '')}?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -94,7 +94,7 @@ const LocationSection = () => {
             Lokasi & Kontak
           </h2>
           <p className="font-inter text-lg text-gray-600 max-w-3xl mx-auto">
-            Kunjungi berbagai unit usaha BUMDes Surya Buana yang tersebar di seluruh desa untuk mendapatkan layanan terbaik
+            Kunjungi berbagai unit usaha BUMDes Gotong Royong Sejahtera yang tersebar di seluruh desa untuk mendapatkan layanan terbaik
           </p>
         </div>
 
@@ -261,7 +261,7 @@ const LocationSection = () => {
           <Button
             variant="outline"
             size="lg"
-            onClick={() => handleWhatsAppContact('+62 812-3456-7890', 'BUMDes Surya Buana')}
+            onClick={() => handleWhatsAppContact('+62 812-3456-7890', 'BUMDes Gotong Royong Sejahtera')}
             iconName="MessageCircle"
             iconPosition="left"
             className="bg-white text-primary hover:bg-gray-50"

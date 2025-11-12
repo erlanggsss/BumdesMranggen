@@ -34,13 +34,13 @@ const VillageIdentitySection = () => {
           <div className="space-y-8">
             <div>
               <h2 className="font-poppins font-bold text-3xl sm:text-4xl lg:text-5xl text-primary mb-6">
-                Tentang BUMDes Surya Buana
+                Tentang BUMDes Gotong Royong Sejahtera
               </h2>
               <p className="font-inter text-lg text-gray-700 leading-relaxed mb-6">
-                BUMDes Surya Buana didirikan pada tahun 2019 dengan visi menjadi motor penggerak ekonomi desa yang berkelanjutan. Kami berkomitmen untuk memberdayakan masyarakat melalui berbagai unit usaha yang mengoptimalkan potensi lokal.
+                BUMDes Gotong Royong Sejahtera merupakan Badan Usaha Milik Desa yang berdiri sebagai wadah penggerak ekonomi lokal dan pemberdayaan masyarakat. Dengan dukungan penuh dari pemerintah desa serta partisipasi aktif warga, kami berkomitmen untuk mengelola potensi desa secara profesional, transparan, dan berkelanjutan.
               </p>
               <p className="font-inter text-lg text-gray-700 leading-relaxed">
-                Dengan dukungan penuh pemerintah desa dan partisipasi aktif masyarakat, kami telah berhasil menciptakan ekosistem bisnis yang menguntungkan semua pihak dan berkontribusi nyata terhadap peningkatan kesejahteraan warga.
+                Melalui berbagai unit usaha, kami berupaya meningkatkan kesejahteraan masyarakat, membuka lapangan kerja baru, serta menciptakan kemandirian ekonomi desa. Kami percaya bahwa kemajuan desa berawal dari kolaborasi, inovasi, dan semangat gotong royong seluruh warga Desa Mranggen.
               </p>
             </div>
 
@@ -54,7 +54,7 @@ const VillageIdentitySection = () => {
                   <h3 className="font-poppins font-semibold text-xl text-gray-900">Visi</h3>
                 </div>
                 <p className="font-inter text-gray-700 leading-relaxed">
-                  Menjadi BUMDes terdepan dalam pemberdayaan ekonomi masyarakat desa yang berkelanjutan dan berdaya saing.
+                  Mewujudkan kemandirian ekonomi desa melalui pengelolaan potensi lokal yang produktif, transparan, dan berkelanjutan.
                 </p>
               </div>
 
@@ -66,7 +66,7 @@ const VillageIdentitySection = () => {
                   <h3 className="font-poppins font-semibold text-xl text-gray-900">Misi</h3>
                 </div>
                 <p className="font-inter text-gray-700 leading-relaxed">
-                  Mengembangkan potensi ekonomi lokal melalui inovasi, transparansi, dan partisipasi aktif masyarakat.
+                  Mengembangkan unit usaha desa yang inovatif dan memberdayakan masyarakat untuk meningkatkan kesejahteraan bersama.
                 </p>
               </div>
             </div>
@@ -82,41 +82,6 @@ const VillageIdentitySection = () => {
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
-
-            {/* Floating Stats */}
-            <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl">
-              <div className="flex items-center space-x-4">
-                <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center">
-                  <Icon name="Calendar" size={28} color="white" />
-                </div>
-                <div>
-                  <p className="font-poppins font-bold text-2xl text-gray-900">6+</p>
-                  <p className="font-inter text-sm text-gray-600">Tahun Beroperasi</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Achievements Grid */}
-        <div className="mt-20">
-          <h3 className="font-poppins font-bold text-2xl sm:text-3xl text-center text-gray-900 mb-12">
-            Pencapaian Kami
-          </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {achievements?.map((achievement, index) =>
-            <div key={index} className="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
-                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Icon name={achievement?.icon} size={28} color="var(--color-primary)" />
-                </div>
-                <h4 className="font-poppins font-semibold text-lg text-gray-900 mb-2">
-                  {achievement?.title}
-                </h4>
-                <p className="font-inter text-gray-600">
-                  {achievement?.description}
-                </p>
-              </div>
-            )}
           </div>
         </div>
       </div>

@@ -48,12 +48,12 @@ const HeroSection = () => {
           {/* Main Headline - Responsive typography */}
           <h1 className="font-poppins font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 sm:mb-6 leading-tight">
             Membangun Kemakmuran Desa Bersama{' '}
-            <span className="text-primary block sm:inline mt-2 sm:mt-0">BUMDes Surya Buana</span>
+            <span className="text-primary block sm:inline mt-2 sm:mt-0">BUMDes Gotong Royong Sejahtera</span>
           </h1>
 
           {/* Supporting Subheadline - Responsive text */}
           <p className="font-inter text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2 sm:px-0">
-            Badan Usaha Milik Desa yang transparan dan didukung pemerintah untuk mengembangkan ekonomi masyarakat dan menciptakan lapangan kerja berkelanjutan
+            Badan Usaha Milik Desa yang dikelola secara transparan, didukung oleh pemerintah, dan berkomitmen mengembangkan ekonomi masyarakat serta menciptakan lapangan kerja yang berkelanjutan.
           </p>
 
           {/* Trust Indicators - Responsive grid */}
@@ -61,17 +61,6 @@ const HeroSection = () => {
             <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-2 sm:px-4 min-h-10">
               <Icon name="Shield" size={18} color="white" className="sm:w-5 sm:h-5" />
               <span className="text-white font-inter text-sm sm:text-base">Terdaftar Resmi</span>
-            </div>
-            <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-2 sm:px-4 min-h-10">
-              <Icon name="Users" size={18} color="white" className="sm:w-5 sm:h-5" />
-              <span className="text-white font-inter text-sm sm:text-base">500+ Anggota</span>
-            </div>
-            <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-2 sm:px-4 min-h-10">
-              <Icon name="TrendingUp" size={18} color="white" className="sm:w-5 sm:h-5" />
-              <span className="text-white font-inter text-sm sm:text-base">
-                <span className="hidden sm:inline">Rp 2.5M Omzet/Bulan</span>
-                <span className="sm:hidden">Rp 2.5M/Bulan</span>
-              </span>
             </div>
           </div>
 

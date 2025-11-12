@@ -337,7 +337,7 @@ const ContactSection = () => {
                       variant="outline"
                       size="sm"
                       onClick={() => {
-                        const message = encodeURIComponent('Halo! Saya ingin mengetahui lebih lanjut tentang BUMDes Surya Buana.');
+                        const message = encodeURIComponent('Halo! Saya ingin mengetahui lebih lanjut tentang BUMDes Gotong Royong Sejahtera.');
                         const whatsappUrl = `https://wa.me/6281293603711?text=${message}`;
                         window.open(whatsappUrl, '_blank');
                       }}
@@ -376,7 +376,7 @@ const ContactSection = () => {
                     <Button
                       variant="outline"
                       size="sm"
-                      onClick={() => window.location.href = 'mailto:info@bumdes-mranggen.id'}
+                      onClick={() => window.location.href = 'mailto:2110631170078@student.unsika.ac.id'}
                       className="bg-white text-primary hover:bg-gray-50"
                     >
                       info@bumdes-mranggen.id

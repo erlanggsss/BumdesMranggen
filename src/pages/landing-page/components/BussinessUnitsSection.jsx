@@ -78,7 +78,7 @@ const BusinessUnitsSection = () => {
 
 
   const handleWhatsAppContact = (phoneNumber, unitTitle) => {
-    const message = encodeURIComponent(`Halo! Saya tertarik dengan unit usaha ${unitTitle} BUMDes Surya Buana. Mohon informasi lebih lanjut.`);
+    const message = encodeURIComponent(`Halo! Saya tertarik dengan unit usaha ${unitTitle} BUMDes Gotong Royong Sejahtera. Mohon informasi lebih lanjut.`);
     const whatsappUrl = `https://wa.me/${phoneNumber?.replace(/[^0-9]/g, '')}?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -92,7 +92,7 @@ const BusinessUnitsSection = () => {
             Unit Usaha Kami
           </h2>
           <p className="font-inter text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-2 sm:px-0">
-            Empat pilar utama BUMDes Surya Buana yang menggerakkan ekonomi desa dan menciptakan lapangan kerja berkelanjutan untuk masyarakat
+            Empat pilar utama BUMDes Gotong Royong Sejahtera yang menggerakkan ekonomi desa dan menciptakan lapangan kerja berkelanjutan untuk masyarakat
           </p>
         </div>
 
