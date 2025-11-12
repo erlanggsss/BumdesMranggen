@@ -104,7 +104,7 @@ const ContactSection = () => {
         const message = encodeURIComponent(
           `Halo! Saya ${formData?.name} (${formData?.visitorType}). ${formData?.message}`
         );
-        const whatsappUrl = `https://wa.me/6281234567890?text=${message}`;
+        const whatsappUrl = `https://wa.me/6281293603711?text=${message}`;
         window.open(whatsappUrl, '_blank');
       }
 
@@ -338,12 +338,12 @@ const ContactSection = () => {
                       size="sm"
                       onClick={() => {
                         const message = encodeURIComponent('Halo! Saya ingin mengetahui lebih lanjut tentang BUMDes Surya Buana.');
-                        const whatsappUrl = `https://wa.me/6281234567890?text=${message}`;
+                        const whatsappUrl = `https://wa.me/6281293603711?text=${message}`;
                         window.open(whatsappUrl, '_blank');
                       }}
                       className="bg-white text-primary hover:bg-gray-50"
                     >
-                      +62 812-3456-7890
+                      +62 812-9360-3711
                     </Button>
                   </div>
                 </div>

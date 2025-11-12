@@ -88,12 +88,10 @@ const AnchorNavigation = ({
           <div className="flex items-center justify-between h-14 sm:h-16 lg:h-18">
             {/* Logo - Responsive sizing */}
             <div className="flex items-center space-x-2 sm:space-x-3">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary rounded-lg flex items-center justify-center">
-                <Icon name="Leaf" size={18} color="white" className="sm:w-6 sm:h-6" />
-              </div>
+              <img src="/favicon.png" alt="BUMDes Logo" className="w-8 h-8 sm:w-10 sm:h-10 object-contain" />
               <div className="font-poppins font-bold text-sm sm:text-lg lg:text-xl text-primary">
-                <span className="hidden sm:inline">BUMDes Surya Buana</span>
-                <span className="sm:hidden">BUMDes</span>
+                <span className="hidden sm:inline">BUMDes Gotong Royong Sejahtera</span>
+                <span className="sm:hidden">BUMDes Gotong Royong Sejahtera</span>
               </div>
             </div>
 
