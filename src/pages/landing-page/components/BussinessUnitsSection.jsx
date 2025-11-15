@@ -14,66 +14,16 @@ const BusinessUnitsSection = () => {
     image: "https://images.unsplash.com/photo-1677222383404-cf4510f7f5d1",
     imageAlt: 'Indonesian farmers working in green rice terraces with traditional farming tools during harvest season',
     description: 'Mengembangkan sektor pertanian dengan teknologi modern dan praktik berkelanjutan',
-    services: [
-    'Produksi beras organik',
-    'Budidaya sayuran hidroponik',
-    'Peternakan ayam kampung',
-    'Pengolahan pupuk kompos'],
-
-    contact: '+62 812-3456-7890',
-    revenue: 'Rp 800 juta/tahun',
-    members: '150 petani'
+    contact: '+62 812-3456-7890'
   },
   {
-    id: 'tourism',
-    title: 'Wisata Desa',
-    icon: 'Camera',
-    image: "https://images.unsplash.com/photo-1729669375200-9008ea007cdd",
-    imageAlt: 'Traditional Indonesian village tourism site with bamboo houses, cultural performances, and visitors enjoying local activities',
-    description: 'Mengembangkan potensi wisata alam dan budaya untuk meningkatkan ekonomi masyarakat',
-    services: [
-    'Wisata alam dan edukasi',
-    'Homestay tradisional',
-    'Paket wisata kuliner',
-    'Workshop kerajinan lokal'],
-
-    contact: '+62 812-3456-7891',
-    revenue: 'Rp 600 juta/tahun',
-    members: '80 pelaku wisata'
-  },
-  {
-    id: 'umkm',
-    title: 'UMKM & Kerajinan',
-    icon: 'Hammer',
-    image: "https://images.unsplash.com/photo-1677146339793-ad2f6e8bf64f",
-    imageAlt: 'Indonesian artisan crafting traditional bamboo products in workshop with various handmade items displayed',
-    description: 'Memberdayakan usaha kecil dan menengah serta kerajinan tangan khas daerah',
-    services: [
-    'Kerajinan bambu dan rotan',
-    'Produk makanan olahan',
-    'Tekstil dan batik lokal',
-    'Pemasaran online'],
-
-    contact: '+62 812-3456-7892',
-    revenue: 'Rp 1.2 miliar/tahun',
-    members: '200 UMKM'
-  },
-  {
-    id: 'water',
-    title: 'Pengelolaan Air',
-    icon: 'Droplets',
-    image: "https://images.unsplash.com/photo-1472633000120-16b5381f2c04",
-    imageAlt: 'Modern water management facility in Indonesian village with clean water distribution system and storage tanks',
-    description: 'Menyediakan air bersih berkualitas dan mengelola sistem irigasi desa',
-    services: [
-    'Penyediaan air bersih',
-    'Sistem irigasi pertanian',
-    'Pengolahan air limbah',
-    'Maintenance infrastruktur'],
-
-    contact: '+62 812-3456-7893',
-    revenue: 'Rp 400 juta/tahun',
-    members: '100% warga terlayani'
+    id: 'livestock',
+    title: 'Peternakan',
+    icon: 'Beef',
+    image: "https://images.unsplash.com/photo-1643727920313-15ba10650995",
+    imageAlt: 'Indonesian livestock farm with healthy cattle and modern farming facilities in village setting',
+    description: 'Mengembangkan usaha peternakan modern dengan standar kesehatan dan nutrisi terbaik',
+    contact: '+62 812-3456-7892'
   }];
 
 
@@ -92,8 +42,7 @@ const BusinessUnitsSection = () => {
             Unit Usaha Kami
           </h2>
           <p className="font-inter text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-2 sm:px-0">
-            Empat pilar utama BUMDes Gotong Royong Sejahtera yang menggerakkan ekonomi desa dan menciptakan lapangan kerja berkelanjutan untuk masyarakat
-          </p>
+            Dua pilar utama BUMDes Mranggen menjadi fondasi dalam membangun ekonomi lokal yang mandiri dan berdaya saing.          </p>
         </div>
 
         {/* Business Units Grid - Responsive layout */}
@@ -138,78 +87,6 @@ const BusinessUnitsSection = () => {
                   <p className="font-inter text-white/90 text-sm sm:text-base line-clamp-2">
                     {unit?.description}
                   </p>
-                </div>
-              </div>
-
-              {/* Card Content - Responsive padding */}
-              <div className="p-4 sm:p-6">
-                {/* Quick Stats - Responsive grid */}
-                <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-6">
-                  <div className="text-center">
-                    <p className="font-poppins font-semibold text-base sm:text-lg text-primary">
-                      <span className="hidden sm:inline">{unit?.revenue}</span>
-                      <span className="sm:hidden">{unit?.revenue?.replace('/tahun', '')}</span>
-                    </p>
-                    <p className="font-inter text-xs sm:text-sm text-gray-600">Pendapatan</p>
-                  </div>
-                  <div className="text-center">
-                    <p className="font-poppins font-semibold text-base sm:text-lg text-primary">
-                      {unit?.members}
-                    </p>
-                    <p className="font-inter text-xs sm:text-sm text-gray-600">Anggota</p>
-                  </div>
-                </div>
-
-                {/* Expandable Content */}
-                {activeUnit === unit?.id &&
-              <div className="space-y-4 border-t border-gray-100 pt-4 sm:pt-6">
-                    <div>
-                      <h4 className="font-poppins font-semibold text-gray-900 mb-3 text-sm sm:text-base">
-                        Layanan Utama:
-                      </h4>
-                      <ul className="space-y-2">
-                        {unit?.services?.map((service, serviceIndex) =>
-                    <li key={serviceIndex} className="flex items-start space-x-2">
-                            <Icon name="Check" size={16} color="var(--color-primary)" className="mt-0.5 flex-shrink-0" />
-                            <span className="font-inter text-gray-700 text-sm sm:text-base">{service}</span>
-                          </li>
-                    )}
-                      </ul>
-                    </div>
-
-                    <Button
-                  variant="default"
-                  size="sm"
-                  onClick={(e) => {
-                    e?.stopPropagation();
-                    handleWhatsAppContact(unit?.contact, unit?.title);
-                  }}
-                  iconName="MessageCircle"
-                  iconPosition="left"
-                  className="w-full min-h-12 sm:min-h-10 text-sm sm:text-base">
-
-                      Hubungi via WhatsApp
-                    </Button>
-                  </div>
-              }
-
-                {/* Toggle Button - Touch-friendly */}
-                <div className="flex justify-center mt-4">
-                  <button
-                  className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors duration-200 min-h-11 px-4 py-2 rounded-md"
-                  onClick={(e) => {
-                    e?.stopPropagation();
-                    setActiveUnit(activeUnit === unit?.id ? null : unit?.id);
-                  }}>
-
-                    <span className="font-inter text-sm sm:text-base">
-                      {activeUnit === unit?.id ? 'Tutup Detail' : 'Lihat Detail'}
-                    </span>
-                    <Icon
-                    name={activeUnit === unit?.id ? 'ChevronUp' : 'ChevronDown'}
-                    size={16} />
-
-                  </button>
                 </div>
               </div>
             </div>

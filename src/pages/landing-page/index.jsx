@@ -7,7 +7,6 @@ import ScrollProgressIndicator from '../../components/ui/ScrollProgressIndicator
 import HeroSection from './components/HeroSection';
 import VillageIdentitySection from './components/VillageIdentitySection';
 import BusinessUnitsSection from './components/BussinessUnitsSection';
-import ProgramsTimelineSection from './components/ProgramsTimelineSection';
 import LeadershipTeamSection from './components/LeadershipTeamSection';
 import LocationSection from './components/LocationSection';
 import ProductGallerySection from './components/ProductGallerySection';
@@ -34,9 +33,6 @@ const LandingPage = () => {
 
         {/* Business Units Showcase */}
         <BusinessUnitsSection />
-
-        {/* Programs Timeline */}
-        <ProgramsTimelineSection />
 
         {/* Leadership Team */}
         <LeadershipTeamSection />

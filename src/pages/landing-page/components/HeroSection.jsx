@@ -47,8 +47,8 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Main Headline - Responsive typography */}
           <h1 className="font-poppins font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 sm:mb-6 leading-tight">
-            Membangun Kemakmuran Desa Bersama{' '}
-            <span className="text-primary block sm:inline mt-2 sm:mt-0">BUMDes Gotong Royong Sejahtera</span>
+            Membangun <span className="text-primary">Kemakmuran Desa</span> Bersama{' '}
+            <span className="text-primary">Kami</span>
           </h1>
 
           {/* Supporting Subheadline - Responsive text */}
@@ -67,22 +67,12 @@ const HeroSection = () => {
           {/* Dual CTAs - Touch-friendly buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 sm:px-0">
             <Button
-              variant="default"
-              size="lg"
-              onClick={handleViewProducts}
-              iconName="Package"
-              iconPosition="left"
-              className="w-full sm:w-auto min-h-12 sm:min-h-11 text-base sm:text-sm font-medium">
-
-              Lihat Produk Kami
-            </Button>
-            <Button
               variant="outline"
               size="lg"
               onClick={handleLearnMore}
               iconName="ArrowRight"
               iconPosition="right"
-              className="w-full sm:w-auto min-h-12 sm:min-h-11 text-base sm:text-sm font-medium bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-gray-900">
+              className="w-full sm:w-auto min-h-12 sm:min-h-11 text-base sm:text-sm font-medium bg-primary/20 backdrop-blur-sm border-primary text-white hover:bg-primary hover:text-white">
 
               Kenali Lebih Dekat
             </Button>
@@ -90,12 +80,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator - Hidden on mobile to save space */}
-      <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-10 hidden sm:block">
-        <div className="animate-bounce">
-          <Icon name="ChevronDown" size={32} color="white" />
-        </div>
-      </div>
     </section>);
 
 };
