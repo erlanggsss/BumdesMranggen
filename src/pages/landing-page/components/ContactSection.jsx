@@ -8,7 +8,6 @@ const ContactSection = () => {
   const [formData, setFormData] = useState({
     visitorType: '',
     name: '',
-    email: '',
     phone: '',
     organization: '',
     subject: '',
@@ -76,7 +75,6 @@ const ContactSection = () => {
 
   const contactMethods = [
     { value: 'whatsapp', label: 'WhatsApp', icon: 'MessageCircle' },
-    { value: 'email', label: 'Email', icon: 'Mail' },
     { value: 'phone', label: 'Telepon', icon: 'Phone' }
   ];
 
@@ -112,7 +110,6 @@ const ContactSection = () => {
       setFormData({
         visitorType: '',
         name: '',
-        email: '',
         phone: '',
         organization: '',
         subject: '',
@@ -153,7 +150,7 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-surface rounded-3xl p-8">
+          <div className="bg-surface rounded-3xl p-8 shadow-lg">
             <h3 className="font-poppins font-bold text-2xl text-gray-900 mb-6">
               Kirim Pesan
             </h3>
@@ -193,7 +190,7 @@ const ContactSection = () => {
               />
 
               {/* Personal Information */}
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="gap-4">
                 <Input
                   label="Nama Lengkap"
                   type="text"
@@ -202,25 +199,7 @@ const ContactSection = () => {
                   onChange={(e) => handleInputChange('name', e?.target?.value)}
                   placeholder="Masukkan nama lengkap"
                 />
-
-                <Input
-                  label="Nomor WhatsApp"
-                  type="tel"
-                  required
-                  value={formData?.phone}
-                  onChange={(e) => handleInputChange('phone', e?.target?.value)}
-                  placeholder="08xxxxxxxxxx"
-                />
               </div>
-
-              <Input
-                label="Email"
-                type="email"
-                required
-                value={formData?.email}
-                onChange={(e) => handleInputChange('email', e?.target?.value)}
-                placeholder="nama@email.com"
-              />
 
               {/* Organization (conditional) */}
               {['business', 'government', 'investor', 'media']?.includes(formData?.visitorType) && (
@@ -320,7 +299,7 @@ const ContactSection = () => {
           {/* Contact Information & Quick Actions */}
           <div className="space-y-8">
             {/* Quick Contact */}
-            <div className="bg-primary rounded-3xl p-8 text-white">
+            <div className="bg-primary rounded-3xl p-8 text-white shadow-lg">
               <h3 className="font-poppins font-bold text-2xl mb-6">
                 Kontak Langsung
               </h3>
@@ -365,29 +344,11 @@ const ContactSection = () => {
                     </Button>
                   </div>
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Icon name="Mail" size={24} color="white" />
-                  </div>
-                  <div>
-                    <h4 className="font-poppins font-semibold mb-2">Email Resmi</h4>
-                    <p className="text-white/90 mb-3">Untuk komunikasi formal dan dokumentasi</p>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => window.location.href = 'mailto:2110631170078@student.unsika.ac.id'}
-                      className="bg-white text-primary hover:bg-gray-50"
-                    >
-                      info@bumdes-mranggen.id
-                    </Button>
-                  </div>
-                </div>
               </div>
             </div>
 
             {/* Office Hours */}
-            <div className="bg-surface rounded-3xl p-8">
+            <div className="bg-surface rounded-3xl p-8 shadow-lg">
               <h3 className="font-poppins font-bold text-2xl text-gray-900 mb-6">
                 Jam Operasional
               </h3>
@@ -404,10 +365,6 @@ const ContactSection = () => {
                 <div className="flex items-center justify-between py-3 border-b border-gray-200">
                   <span className="font-inter font-medium text-gray-900">Minggu</span>
                   <span className="font-inter text-gray-600">Tutup</span>
-                </div>
-                <div className="flex items-center justify-between py-3">
-                  <span className="font-inter font-medium text-gray-900">WhatsApp</span>
-                  <span className="font-inter text-primary font-semibold">24/7</span>
                 </div>
               </div>
 

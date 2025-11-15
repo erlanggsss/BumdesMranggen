@@ -34,11 +34,11 @@ const LandingPage = () => {
         {/* Leadership Team */}
         <LeadershipTeamSection />
 
-        {/* FAQ Section */}
-        <FAQSection />
-
         {/* Contact Form */}
         <ContactSection />
+
+        {/* FAQ Section */}
+        <FAQSection />
       </main>
 
       {/* Footer */}
