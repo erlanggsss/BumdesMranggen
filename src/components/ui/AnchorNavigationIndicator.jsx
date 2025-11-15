@@ -12,7 +12,6 @@ const AnchorNavigation = ({
     { label: "Beranda", href: "#beranda", icon: "Home" },
     { label: "Tentang Kami", href: "#tentang", icon: "Users" },
     { label: "Unit Usaha", href: "#unit-usaha", icon: "Building2" },
-    { label: "Produk", href: "#produk", icon: "Package" },
     { label: "Kontak", href: "#kontak", icon: "Phone" }
   ];
 

@@ -8,9 +8,6 @@ import HeroSection from './components/HeroSection';
 import VillageIdentitySection from './components/VillageIdentitySection';
 import BusinessUnitsSection from './components/BussinessUnitsSection';
 import LeadershipTeamSection from './components/LeadershipTeamSection';
-import LocationSection from './components/LocationSection';
-import ProductGallerySection from './components/ProductGallerySection';
-import TestimonialsSection from './components/TestimonialsSection';
 import FAQSection from './components/FAQSection';
 import ContactSection from './components/ContactSection';
 import FooterSection from './components/FooterSection';
@@ -36,15 +33,6 @@ const LandingPage = () => {
 
         {/* Leadership Team */}
         <LeadershipTeamSection />
-
-        {/* Interactive Location */}
-        <LocationSection />
-
-        {/* Product Gallery */}
-        <ProductGallerySection />
-
-        {/* Community Testimonials */}
-        <TestimonialsSection />
 
         {/* FAQ Section */}
         <FAQSection />
