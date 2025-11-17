@@ -39,7 +39,7 @@ const FAQSection = () => {
       id: 6,
       category: 'Produk',
       question: 'Bagaimana cara memesan produk BUMDes?',
-      answer: `Pemesanan produk BUMDes Gotong Royong Sejahtera sangat mudah dan fleksibel:\n\n📱 Cara Pemesanan:\n• WhatsApp: +62 812-3456-7890 (24/7)\n• Kunjungi langsung kantor atau unit usaha\n• Melalui website resmi (segera hadir)\n• Aplikasi mobile BUMDes (dalam pengembangan)\n\n📦 Sistem Pengiriman:\n• Gratis ongkir untuk wilayah Desa Mranggen\n• Pengiriman ke luar desa dengan tarif terjangkau\n• Sistem COD (Cash on Delivery) tersedia\n• Garansi kualitas produk 100%\n\n💳 Metode Pembayaran:\n• Tunai\n• Transfer bank\n• E-wallet (GoPay, OVO, DANA)\n• Sistem kredit untuk anggota BUMDes`
+      answer: `Pemesanan produk BUMDes Gotong Royong Sejahtera sangat mudah dan fleksibel:\n\n📱 Cara Pemesanan:\n• WhatsApp: +62 838-4334-3328 (24/7)\n• Kunjungi langsung kantor atau unit usaha\n• Melalui website resmi (segera hadir)\n• Aplikasi mobile BUMDes (dalam pengembangan)\n\n📦 Sistem Pengiriman:\n• Gratis ongkir untuk wilayah Desa Mranggen\n• Pengiriman ke luar desa dengan tarif terjangkau\n• Sistem COD (Cash on Delivery) tersedia\n• Garansi kualitas produk 100%\n\n💳 Metode Pembayaran:\n• Tunai\n• Transfer bank\n• E-wallet (GoPay, OVO, DANA)\n• Sistem kredit untuk anggota BUMDes`
     },
     {
       id: 7,
@@ -51,7 +51,7 @@ const FAQSection = () => {
       id: 8,
       category: 'Kontak',
       question: 'Bagaimana cara menghubungi BUMDes untuk informasi lebih lanjut?',
-      answer: `Tim customer service BUMDes Gotong Royong Sejahtera siap membantu Anda:\n\n📞 Kontak Utama:\n• WhatsApp: +62 812-3456-7890 (24/7)\n• Telepon: (024) 123-4567\n• Email: info@bumdes-mranggen.id\n\n🏢 Alamat Kantor:\n• Jl. Desa Mranggen No. 123, Mranggen, Demak\n• Jam operasional: Senin-Jumat 08:00-16:00 WIB\n• Sabtu: 08:00-12:00 WIB\n\n🌐 Media Sosial:\n• Facebook: BUMDes Gotong Royong Sejahtera\n• Instagram: @bumdes_mranggen\n• YouTube: BUMDes Gotong Royong Sejahtera Official\n\nKami berkomitmen merespons setiap pertanyaan dalam waktu maksimal 2 jam pada jam kerja.`
+      answer: `Tim customer service BUMDes Gotong Royong Sejahtera siap membantu Anda:\n\n📞 Kontak Utama:\n• WhatsApp: +62 838-4334-3328 (24/7)\n• Telepon: (024) 123-4567\n• Email: info@bumdes-mranggen.id\n\n🏢 Alamat Kantor:\n• Jl. Desa Mranggen No. 123, Mranggen, Demak\n• Jam operasional: Senin-Jumat 08:00-16:00 WIB\n• Sabtu: 08:00-12:00 WIB\n\n🌐 Media Sosial:\n• Facebook: BUMDes Gotong Royong Sejahtera\n• Instagram: @bumdes_mranggen\n• YouTube: BUMDes Gotong Royong Sejahtera Official\n\nKami berkomitmen merespons setiap pertanyaan dalam waktu maksimal 2 jam pada jam kerja.`
     }
   ];
 
@@ -197,7 +197,7 @@ const FAQSection = () => {
               <button
                 onClick={() => {
                   const message = encodeURIComponent('Halo! Saya memiliki pertanyaan tentang BUMDes Gotong Royong Sejahtera. Mohon bantuan informasinya.');
-                  const whatsappUrl = `https://wa.me/6281234567890?text=${message}`;
+                  const whatsappUrl = `https://wa.me/6283843343328?text=${message}`;
                   window.open(whatsappUrl, '_blank');
                 }}
                 className="flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-inter font-medium transition-colors duration-200"
@@ -206,7 +206,7 @@ const FAQSection = () => {
                 <span>Chat WhatsApp</span>
               </button>
               <button
-                onClick={() => window.location.href = 'tel:+6281234567890'}
+                onClick={() => window.location.href = 'tel:+6283843343328'}
                 className="flex items-center space-x-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-xl font-inter font-medium transition-colors duration-200"
               >
                 <Icon name="Phone" size={20} />

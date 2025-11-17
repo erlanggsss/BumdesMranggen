@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Icon from '../AppIcon';
 
 const WhatsAppFloatingButton = ({ 
-  phoneNumber = "6281234567890",
+  phoneNumber = "6283843343328",
   className = ""
 }) => {
   const [isHovered, setIsHovered] = useState(false);

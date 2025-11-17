@@ -18,7 +18,7 @@ const LandingPage = () => {
       {/* Fixed Navigation Components */}
       <ScrollProgressIndicator />
       <AnchorNavigation />
-      <WhatsAppFloatingButton phoneNumber="6281234567890" />
+      <WhatsAppFloatingButton phoneNumber="6283843343328" />
 
       {/* Main Content Sections */}
       <main>

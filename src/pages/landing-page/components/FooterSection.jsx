@@ -30,7 +30,7 @@ const FooterSection = () => {
     {
       icon: 'Phone',
       title: 'Telepon',
-      content: '+62 812-3456-7890\n(024) 123-4567'
+      content: '+62 838-4334-3328\n(024) 123-4567'
     },
     {
       icon: 'Clock',
@@ -48,7 +48,7 @@ const FooterSection = () => {
 
   const handleWhatsAppContact = () => {
     const message = encodeURIComponent('Halo! Saya tertarik untuk mengetahui lebih lanjut tentang BUMDes Gotong Royong Sejahtera.');
-    const whatsappUrl = `https://wa.me/6281234567890?text=${message}`;
+    const whatsappUrl = `https://wa.me/6283843343328?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
 

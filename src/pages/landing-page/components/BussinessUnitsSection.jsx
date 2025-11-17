@@ -14,7 +14,7 @@ const BusinessUnitsSection = () => {
     image: "https://images.unsplash.com/photo-1677222383404-cf4510f7f5d1",
     imageAlt: 'Indonesian farmers working in green rice terraces with traditional farming tools during harvest season',
     description: 'Mengembangkan sektor pertanian dengan teknologi modern dan praktik berkelanjutan',
-    contact: '+62 812-3456-7890'
+    contact: '+62 838-4334-3328'
   },
   {
     id: 'livestock',
@@ -23,7 +23,7 @@ const BusinessUnitsSection = () => {
     image: "https://images.unsplash.com/photo-1643727920313-15ba10650995",
     imageAlt: 'Indonesian livestock farm with healthy cattle and modern farming facilities in village setting',
     description: 'Mengembangkan usaha peternakan modern dengan standar kesehatan dan nutrisi terbaik',
-    contact: '+62 812-3456-7892'
+    contact: '+62 838-4334-3328'
   }];
 
 

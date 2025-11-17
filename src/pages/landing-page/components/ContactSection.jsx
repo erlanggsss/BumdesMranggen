@@ -20,12 +20,12 @@ const ContactSection = () => {
   const [submitStatus, setSubmitStatus] = useState(null);
 
   const visitorTypeOptions = [
-    { value: 'villager', label: 'Warga Desa', description: 'Warga Desa Mranggen yang ingin bergabung atau mendapat informasi' },
-    { value: 'business', label: 'Mitra Bisnis', description: 'Perusahaan atau individu yang tertarik bermitra' },
-    { value: 'government', label: 'Stakeholder Pemerintah', description: 'Instansi pemerintah atau lembaga resmi' },
-    { value: 'investor', label: 'Investor', description: 'Pihak yang tertarik berinvestasi' },
-    { value: 'media', label: 'Media/Peneliti', description: 'Jurnalis, akademisi, atau peneliti' },
-    { value: 'other', label: 'Lainnya', description: 'Kategori lain yang tidak disebutkan di atas' }
+    { value: 'Warga Desa', label: 'Warga Desa', description: 'Warga Desa Mranggen yang ingin bergabung atau mendapat informasi' },
+    { value: 'Mitra Bisnis', label: 'Mitra Bisnis', description: 'Perusahaan atau individu yang tertarik bermitra' },
+    { value: 'Stakeholder Pemerintah', label: 'Stakeholder Pemerintah', description: 'Instansi pemerintah atau lembaga resmi' },
+    { value: 'Investor', label: 'Investor', description: 'Pihak yang tertarik berinvestasi' },
+    { value: 'Media/Peneliti', label: 'Media/Peneliti', description: 'Jurnalis, akademisi, atau peneliti' },
+    { value: 'Lainnya', label: 'Lainnya', description: 'Kategori lain yang tidak disebutkan di atas' }
   ];
 
   const subjectOptions = {
@@ -102,7 +102,7 @@ const ContactSection = () => {
         const message = encodeURIComponent(
           `Halo! Saya ${formData?.name} (${formData?.visitorType}). ${formData?.message}`
         );
-        const whatsappUrl = `https://wa.me/6281293603711?text=${message}`;
+        const whatsappUrl = `https://wa.me/6283843343328?text=${message}`;
         window.open(whatsappUrl, '_blank');
       }
 
@@ -322,7 +322,7 @@ const ContactSection = () => {
                       }}
                       className="bg-white text-primary hover:bg-gray-50"
                     >
-                      +62 812-9360-3711
+                      +62 838-4334-3328
                     </Button>
                   </div>
                 </div>
@@ -337,7 +337,7 @@ const ContactSection = () => {
                     <Button
                       variant="outline"
                       size="sm"
-                      onClick={() => window.location.href = 'tel:+6281234567890'}
+                      onClick={() => window.location.href = 'tel:+6283843343328'}
                       className="bg-white text-primary hover:bg-gray-50"
                     >
                       (024) 123-4567
