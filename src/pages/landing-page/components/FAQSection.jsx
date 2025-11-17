@@ -205,13 +205,6 @@ const FAQSection = () => {
                 <Icon name="MessageCircle" size={20} />
                 <span>Chat WhatsApp</span>
               </button>
-              <button
-                onClick={() => window.location.href = 'tel:+6283843343328'}
-                className="flex items-center space-x-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-xl font-inter font-medium transition-colors duration-200"
-              >
-                <Icon name="Phone" size={20} />
-                <span>Telepon Langsung</span>
-              </button>
             </div>
           </div>
         </div>

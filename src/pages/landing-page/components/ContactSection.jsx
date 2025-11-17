@@ -75,7 +75,7 @@ const ContactSection = () => {
 
   const contactMethods = [
     { value: 'whatsapp', label: 'WhatsApp', icon: 'MessageCircle' },
-    { value: 'phone', label: 'Telepon', icon: 'Phone' }
+    { value: 'email', label: 'Email', icon: 'Mail' }
   ];
 
   const handleInputChange = (field, value) => {
@@ -110,7 +110,6 @@ const ContactSection = () => {
       setFormData({
         visitorType: '',
         name: '',
-        phone: '',
         organization: '',
         subject: '',
         message: '',
@@ -235,7 +234,7 @@ const ContactSection = () => {
                   value={formData?.message}
                   onChange={(e) => handleInputChange('message', e?.target?.value)}
                   placeholder="Jelaskan pertanyaan atau kebutuhan Anda secara detail..."
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl font-inter focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-xl font-inter text-base focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
                 />
               </div>
 
@@ -329,18 +328,18 @@ const ContactSection = () => {
 
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Icon name="Phone" size={24} color="white" />
+                    <Icon name="Mail" size={24} color="white" />
                   </div>
                   <div>
-                    <h4 className="font-poppins font-semibold mb-2">Telepon Kantor</h4>
-                    <p className="text-white/90 mb-3">Senin-Jumat: 08:00-16:00 WIB</p>
+                    <h4 className="font-poppins font-semibold mb-2">Email Resmi</h4>
+                    <p className="text-white/90 mb-3">Untuk komunikasi formal dan dokumentasi</p>
                     <Button
                       variant="outline"
                       size="sm"
-                      onClick={() => window.location.href = 'tel:+6283843343328'}
+                      onClick={() => window.location.href = 'mailto:2110631170078@student.unsika.ac.id'}
                       className="bg-white text-primary hover:bg-gray-50"
                     >
-                      (024) 123-4567
+                      bumdesgotongroyongsejahtera@gmail.com
                     </Button>
                   </div>
                 </div>
@@ -390,8 +389,8 @@ const ContactSection = () => {
                   <div>
                     <p className="font-inter font-medium text-gray-900">Alamat Lengkap</p>
                     <p className="font-inter text-gray-600">
-                      Jl. Desa Mranggen No. 123<br />
-                      Mranggen, Demak, Jawa Tengah 59567
+                      Jl. Sukoharjo, Kedunggandu<br />
+                      Mranggen, Kec. Polokarto, Kabupaten Sukoharjo, Jawa Tengah 57513
                     </p>
                   </div>
                 </div>
@@ -399,7 +398,7 @@ const ContactSection = () => {
                 <Button
                   variant="outline"
                   onClick={() => {
-                    const googleMapsUrl = 'https://www.google.com/maps/dir/?api=1&destination=-6.9175,110.4167';
+                    const googleMapsUrl = 'https://maps.app.goo.gl/9jE95scYExhD1qiv8';
                     window.open(googleMapsUrl, '_blank');
                   }}
                   iconName="Navigation"

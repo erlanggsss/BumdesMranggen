@@ -12,6 +12,7 @@ const AnchorNavigation = ({
     { label: "Beranda", href: "#beranda", icon: "Home" },
     { label: "Tentang Kami", href: "#tentang", icon: "Users" },
     { label: "Unit Usaha", href: "#unit-usaha", icon: "Building2" },
+    { label: "Kepemimpinan", href: "#struktur-organisasi", icon: "People" },
     { label: "Kontak", href: "#kontak", icon: "Phone" },
     { label: "FAQs", href: "#faq", icon: "HelpCircle" }
   ];

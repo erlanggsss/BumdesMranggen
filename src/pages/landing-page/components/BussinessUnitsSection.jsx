@@ -9,7 +9,7 @@ const BusinessUnitsSection = () => {
   const businessUnits = [
   {
     id: 'agriculture',
-    title: 'Pertanian & Perkebunan',
+    title: 'Pertanian',
     icon: 'Wheat',
     image: "https://images.unsplash.com/photo-1677222383404-cf4510f7f5d1",
     imageAlt: 'Indonesian farmers working in green rice terraces with traditional farming tools during harvest season',
@@ -42,7 +42,7 @@ const BusinessUnitsSection = () => {
             Unit Usaha Kami
           </h2>
           <p className="font-inter text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-2 sm:px-0">
-            Dua pilar utama BUMDes Mranggen menjadi fondasi dalam membangun ekonomi lokal yang mandiri dan berdaya saing.          </p>
+            Dua pilar utama BUMDes Gotong Royong Sejahtera menjadi fondasi dalam membangun ekonomi lokal yang mandiri dan berdaya saing.          </p>
         </div>
 
         {/* Business Units Grid - Responsive layout */}

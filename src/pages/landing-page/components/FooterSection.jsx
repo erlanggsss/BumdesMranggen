@@ -9,14 +9,13 @@ const FooterSection = () => {
     { name: 'Beranda', href: '#beranda' },
     { name: 'Tentang Kami', href: '#tentang' },
     { name: 'Unit Usaha', href: '#unit-usaha' },
-    { name: 'Program', href: '#program' },
-    { name: 'Produk', href: '#produk' },
-    { name: 'Kontak', href: '#kontak' }
+    { name: 'Struktur Organisasi', href: '#struktur-organisasi' },
+    { name: 'kontak', href: '#kontak' },
+    { name: 'FAQs', href: '#faq' }
   ];
 
   const services = [
     { name: 'Pertanian', href: '#unit-usaha' },
-    { name: 'Perkebunan', href: '#unit-usaha' },
     { name: 'Peternakan', href: '#unit-usaha' },
     { name: 'Mitra Usaha', href: '#kontak' }
   ];
@@ -25,18 +24,23 @@ const FooterSection = () => {
     {
       icon: 'MapPin',
       title: 'Alamat',
-      content: 'Jl. Desa Mranggen No. 123\nMranggen, Demak, Jawa Tengah 59567'
+      content: 'Jl. Sukoharjo, Kedunggandu\nMranggen, Kec. Polokarto, Kabupaten Sukoharjo, Jawa Tengah 57513'
     },
     {
       icon: 'Phone',
       title: 'Telepon',
-      content: '+62 838-4334-3328\n(024) 123-4567'
+      content: '+62 838-4334-3328'
     },
     {
       icon: 'Clock',
       title: 'Jam Operasional',
       content: 'Senin-Jumat: 08:00-16:00 WIB\nSabtu: 08:00-12:00 WIB'
-    }
+    },
+    {
+      icon: 'Mail',
+      title: 'Email',
+      content: 'bumdesgotongroyongsejahtera@gmail.com'
+    },
   ];
 
   const handleScrollToSection = (href) => {
