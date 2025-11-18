@@ -9,19 +9,19 @@ const FAQSection = () => {
       id: 1,
       category: 'Umum',
       question: 'Apa itu BUMDes dan bagaimana cara kerjanya?',
-      answer: `BUMDes (Badan Usaha Milik Desa) adalah lembaga usaha yang dimiliki dan dikelola oleh pemerintah desa dan masyarakat. BUMDes Gotong Royong Sejahtera beroperasi dengan prinsip transparansi, akuntabilitas, dan partisipatif.\n\nCara kerja BUMDes:\n• Mengelola berbagai unit usaha yang mengoptimalkan potensi desa\n• Memberikan layanan kepada masyarakat dengan harga terjangkau\n• Mengembangkan ekonomi lokal melalui kemitraan strategis\n• Membagikan keuntungan untuk pembangunan desa dan kesejahteraan masyarakat`
+      answer: `BUMDes (Badan Usaha Milik Desa) adalah lembaga usaha yang dimiliki dan dikelola oleh pemerintah desa dan masyarakat. BUMDes Gotong Royong Sejahtera mengelola sektor pertanian dan peternakan dengan standar profesional, transparansi, dan komitmen penuh terhadap pemberdayaan masyarakat.\n\nCara kerja BUMDes:\n• Mengelola unit usaha pertanian dan peternakan dengan efisiensi tinggi\n• Memberikan konsultasi teknis dan dukungan kepada petani dan peternak\n• Mengembangkan ekonomi lokal melalui kemitraan strategis\n• Membagikan keuntungan untuk pembangunan desa dan meningkatkan kesejahteraan masyarakat`
     },
     {
       id: 2,
       category: 'Keanggotaan',
       question: 'Siapa saja yang bisa menjadi anggota BUMDes?',
-      answer: `Keanggotaan BUMDes Gotong Royong Sejahtera terbuka untuk:\n\n• Seluruh warga Desa Gotong Royong Sejahtera yang berusia minimal 17 tahun\n• Memiliki KTP dengan domisili di Desa Gotong Royong Sejahtera\n• Berkomitmen untuk berpartisipasi aktif dalam kegiatan BUMDes\n• Bersedia mengikuti aturan dan ketentuan yang berlaku\n\nProses pendaftaran mudah dan gratis. Anggota akan mendapatkan akses ke berbagai program pelatihan, bantuan modal usaha, dan layanan BUMDes lainnya.`
+      answer: `Keanggotaan BUMDes Gotong Royong Sejahtera terbuka untuk:\n\n• Seluruh warga Desa Mranggen yang berusia minimal 17 tahun\n• Memiliki KTP dengan domisili di Desa Mranggen\n• Berkomitmen untuk berpartisipasi aktif dalam kegiatan BUMDes\n• Bersedia mengikuti aturan dan ketentuan yang berlaku\n\nProses pendaftaran mudah dan gratis. Anggota akan mendapatkan akses ke program pelatihan, bantuan modal usaha, dan layanan BUMDes untuk mengembangkan usaha pertanian dan peternakan mereka.`
     },
     {
       id: 3,
       category: 'Layanan',
       question: 'Apa saja layanan yang tersedia di BUMDes Gotong Royong Sejahtera?',
-      answer: `BUMDes Gotong Royong Sejahtera menyediakan berbagai layanan unggulan:\n\n🌾 Unit Pertanian & Perkebunan:\n• Penjualan produk pertanian organik\n• Konsultasi teknis pertanian\n• Penyediaan bibit dan pupuk berkualitas\n\n🏕️ Unit Wisata Desa:\n• Paket wisata alam dan budaya\n• Homestay tradisional\n• Workshop kerajinan lokal\n\n🏭 Unit UMKM & Kerajinan:\n• Pelatihan keterampilan\n• Bantuan pemasaran online\n• Showroom produk lokal\n\n💧 Unit Pengelolaan Air:\n• Penyediaan air bersih\n• Sistem irigasi pertanian\n• Maintenance infrastruktur air`
+      answer: `BUMDes Gotong Royong Sejahtera menyediakan layanan unggulan di dua sektor utama:\n\n🌾 Unit Pertanian:\n• Produksi pertanian berkualitas dengan standar profesional dan berkelanjutan\n• Konsultasi teknis pertanian dan manajemen lahan\n• Penyediaan bibit unggul dan pupuk berkualitas\n• Bantuan pemasaran hasil pertanian ke pasar yang lebih luas\n\n🐄 Unit Peternakan:\n• Produksi ternak dengan manajemen efektif dan efisien\n• Konsultasi teknis pemeliharaan dan kesehatan hewan\n• Penyediaan pakan berkualitas dan vaksinasi rutin\n• Dukungan pemasaran produk peternakan\n\n🤝 Layanan Kemitraan & Pemberdayaan:\n• Program pelatihan untuk meningkatkan keterampilan petani dan peternak\n• Bantuan modal usaha dengan syarat yang terjangkau\n• Fasilitasi akses ke pasar dan jaringan bisnis\n• Pendampingan bisnis untuk mitra usaha`
     },
     {
       id: 4,
@@ -31,31 +31,13 @@ const FAQSection = () => {
     },
     {
       id: 5,
-      category: 'Keuangan',
-      question: 'Bagaimana sistem keuangan dan transparansi BUMDes?',
-      answer: `BUMDes Gotong Royong Sejahtera menerapkan sistem keuangan yang transparan dan akuntabel:\n\n💰 Pengelolaan Keuangan:\n• Laporan keuangan bulanan dan tahunan\n• Audit independen oleh pihak ketiga\n• Sistem pembukuan digital yang terintegrasi\n• Pemisahan yang jelas antara dana operasional dan investasi\n\n📊 Transparansi:\n• Laporan keuangan dipublikasikan secara berkala\n• Rapat anggota untuk pertanggungjawaban\n• Dashboard online untuk monitoring kinerja\n• Akses informasi keuangan bagi seluruh anggota\n\n🎯 Pembagian Keuntungan:\n• 40% untuk pengembangan usaha\n• 30% untuk program pemberdayaan masyarakat\n• 20% untuk dana cadangan\n• 10% untuk insentif pengelola`
-    },
-    {
-      id: 6,
-      category: 'Produk',
-      question: 'Bagaimana cara memesan produk BUMDes?',
-      answer: `Pemesanan produk BUMDes Gotong Royong Sejahtera sangat mudah dan fleksibel:\n\n📱 Cara Pemesanan:\n• WhatsApp: +62 838-4334-3328 (24/7)\n• Kunjungi langsung kantor atau unit usaha\n• Melalui website resmi (segera hadir)\n• Aplikasi mobile BUMDes (dalam pengembangan)\n\n📦 Sistem Pengiriman:\n• Gratis ongkir untuk wilayah Desa Mranggen\n• Pengiriman ke luar desa dengan tarif terjangkau\n• Sistem COD (Cash on Delivery) tersedia\n• Garansi kualitas produk 100%\n\n💳 Metode Pembayaran:\n• Tunai\n• Transfer bank\n• E-wallet (GoPay, OVO, DANA)\n• Sistem kredit untuk anggota BUMDes`
-    },
-    {
-      id: 7,
-      category: 'Program',
-      question: 'Apa saja program pelatihan yang tersedia?',
-      answer: `BUMDes Gotong Royong Sejahtera menyelenggarakan berbagai program pelatihan berkualitas:\n\n🎓 Program Pelatihan Reguler:\n• Pertanian organik dan hidroponik (setiap bulan)\n• Keterampilan kerajinan tangan (2x/bulan)\n• Manajemen usaha dan keuangan (1x/bulan)\n• Digital marketing dan e-commerce (2x/bulan)\n\n🏆 Program Khusus:\n• Sertifikasi guide wisata desa\n• Pelatihan pengolahan makanan higienis\n• Workshop fotografi produk\n• Kelas bahasa Inggris untuk pelaku wisata\n\n📅 Jadwal & Pendaftaran:\n• Pendaftaran dibuka setiap awal bulan\n• Gratis untuk anggota BUMDes\n• Sertifikat resmi untuk setiap program\n• Follow-up dan mentoring pasca pelatihan`
-    },
-    {
-      id: 8,
       category: 'Kontak',
       question: 'Bagaimana cara menghubungi BUMDes untuk informasi lebih lanjut?',
-      answer: `Tim customer service BUMDes Gotong Royong Sejahtera siap membantu Anda:\n\n📞 Kontak Utama:\n• WhatsApp: +62 838-4334-3328 (24/7)\n• Telepon: (024) 123-4567\n• Email: info@bumdes-mranggen.id\n\n🏢 Alamat Kantor:\n• Jl. Desa Mranggen No. 123, Mranggen, Demak\n• Jam operasional: Senin-Jumat 08:00-16:00 WIB\n• Sabtu: 08:00-12:00 WIB\n\n🌐 Media Sosial:\n• Facebook: BUMDes Gotong Royong Sejahtera\n• Instagram: @bumdes_mranggen\n• YouTube: BUMDes Gotong Royong Sejahtera Official\n\nKami berkomitmen merespons setiap pertanyaan dalam waktu maksimal 2 jam pada jam kerja.`
+      answer: `Tim customer service BUMDes Gotong Royong Sejahtera siap membantu Anda:\n\n📞 Kontak Utama:\n• WhatsApp: +62 838-4334-3328 (24/7)\n• Email: bumdesgotongroyongsejahtera@gmail.com\n\n🏢 Alamat Kantor:\n• Jl. Sukoharjo, Kedunggandu, Mranggen, Kec. Polokarto, Kabupaten Sukoharjo, Jawa Tengah 57513\n• Jam operasional: Senin-Jumat 08:00-16:00 WIB\n• Sabtu: 08:00-12:00 WIB\n\nKami berkomitmen merespons setiap pertanyaan dalam waktu maksimal 2 jam pada jam kerja.`
     }
   ];
 
-  const categories = ['Semua', 'Umum', 'Keanggotaan', 'Layanan', 'Kemitraan', 'Keuangan', 'Produk', 'Program', 'Kontak'];
+  const categories = ['Semua', 'Umum', 'Keanggotaan', 'Layanan', 'Kemitraan', 'Kontak'];
   const [activeCategory, setActiveCategory] = useState('Semua');
 
   const filteredFAQs = activeCategory === 'Semua' 

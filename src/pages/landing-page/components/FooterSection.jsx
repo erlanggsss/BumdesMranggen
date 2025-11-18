@@ -75,7 +75,7 @@ const FooterSection = () => {
               </div>
               
               <p className="font-inter text-gray-300 leading-relaxed mb-6 text-sm">
-                BUMDes Gotong Royong Sejahtera merupakan Badan Usaha Milik Desa yang berdiri sebagai wadah penggerak ekonomi lokal dan pemberdayaan masyarakat. Dengan dukungan penuh dari pemerintah desa serta partisipasi aktif warga, BUMDes Mranggen berkomitmen untuk mengelola potensi desa secara profesional, transparan, dan berkelanjutan.
+                BUMDes Gotong Royong Sejahtera mengelola pertanian dan peternakan dengan standar profesional dan komitmen pemberdayaan masyarakat. Kami bermitra terpercaya bagi petani dan peternak, menggerakkan ekonomi desa melalui inovasi berkelanjutan dan semangat gotong royong menuju kesejahteraan bersama.
               </p>
             </div>
 

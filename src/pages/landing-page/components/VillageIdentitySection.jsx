@@ -29,51 +29,28 @@ const VillageIdentitySection = () => {
   return (
     <section id="tentang" className="py-20 bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="font-poppins font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 mb-6">
+            Tentang BUMDes Gotong Royong Sejahtera
+          </h2>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Content */}
           <div className="space-y-8">
             <div>
-              <h2 className="font-poppins font-bold text-3xl sm:text-4xl lg:text-5xl text-primary mb-6">
-                Tentang BUMDes Gotong Royong Sejahtera
-              </h2>
               <p className="font-inter text-lg text-gray-700 leading-relaxed mb-6">
-                BUMDes Gotong Royong Sejahtera merupakan Badan Usaha Milik Desa yang berdiri sebagai wadah penggerak ekonomi lokal dan pemberdayaan masyarakat. Dengan dukungan penuh dari pemerintah desa serta partisipasi aktif warga, kami berkomitmen untuk mengelola potensi desa secara profesional, transparan, dan berkelanjutan.
+                BUMDes Gotong Royong Sejahtera adalah lembaga usaha desa yang mengelola sektor pertanian dan peternakan dengan standar profesional dan efisiensi tinggi. Didukung oleh komitmen transparansi dan pemberdayaan masyarakat, kami beroperasi sebagai mitra terpercaya bagi petani, peternak, dan stakeholder lokal.
               </p>
               <p className="font-inter text-lg text-gray-700 leading-relaxed">
-                Melalui berbagai unit usaha, kami berupaya meningkatkan kesejahteraan masyarakat, membuka lapangan kerja baru, serta menciptakan kemandirian ekonomi desa. Kami percaya bahwa kemajuan desa berawal dari kolaborasi, inovasi, dan semangat gotong royong seluruh warga Desa Mranggen.
+                Misi kami berfokus pada pertumbuhan berkelanjutan: meningkatkan produktivitas pertanian dan ternak, melibatkan komunitas dalam proses bisnis, mengembangkan jaringan kemitraan yang kuat, dan meningkatkan kesejahteraan ekonomi mitra usaha kami. Semua ini dijalankan dengan semangat gotong royong yang mengutamakan kemajuan bersama.
               </p>
-            </div>
-
-            {/* Mission & Vision */}
-            <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded-2xl shadow-lg">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                    <Icon name="Eye" size={24} color="var(--color-primary)" />
-                  </div>
-                  <h3 className="font-poppins font-semibold text-xl text-gray-900">Visi</h3>
-                </div>
-                <p className="font-inter text-gray-700 leading-relaxed">
-                  Mewujudkan kemandirian ekonomi desa melalui pengelolaan potensi lokal yang produktif, transparan, dan berkelanjutan.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-2xl shadow-lg">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                    <Icon name="Target" size={24} color="var(--color-primary)" />
-                  </div>
-                  <h3 className="font-poppins font-semibold text-xl text-gray-900">Misi</h3>
-                </div>
-                <p className="font-inter text-gray-700 leading-relaxed">
-                  Mengembangkan unit usaha desa yang inovatif dan memberdayakan masyarakat untuk meningkatkan kesejahteraan bersama.
-                </p>
-              </div>
             </div>
           </div>
 
           {/* Image */}
-          <div className="relative">
+          <div className="relative lg:mt-22">
             <div className="relative overflow-hidden rounded-3xl shadow-2xl">
               <Image
                 src="https://images.unsplash.com/photo-1673590794491-c3e419fc7759"
@@ -81,6 +58,54 @@ const VillageIdentitySection = () => {
                 className="w-full h-96 object-cover" />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Mission & Vision - Full Width Centered */}
+        <div className="mt-16">
+          <div className="grid lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                  <Icon name="Eye" size={24} color="var(--color-primary)" />
+                </div>
+                <h3 className="font-poppins font-semibold text-xl text-gray-900">Visi</h3>
+              </div>
+              <p className="font-inter text-gray-700 leading-relaxed">
+                Menjadikan Badan Usaha Milik Desa sebagai Badan Usaha yang terpercaya dan mewujudkan kesejahteraan serta kemajuan masyarakat desa.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                  <Icon name="Target" size={24} color="var(--color-primary)" />
+                </div>
+                <h3 className="font-poppins font-semibold text-xl text-gray-900">Misi</h3>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start space-x-3">
+                  <Icon name="Check" size={20} color="var(--color-primary)" className="mt-0.5 flex-shrink-0" />
+                  <span className="font-inter text-gray-700">Melakukan usaha produksi pertanian yang baik dan menguntungkan.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <Icon name="Check" size={20} color="var(--color-primary)" className="mt-0.5 flex-shrink-0" />
+                  <span className="font-inter text-gray-700">Peningkatan produksi ternak secara efektif dan efesien.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <Icon name="Check" size={20} color="var(--color-primary)" className="mt-0.5 flex-shrink-0" />
+                  <span className="font-inter text-gray-700">Melibatkan masyarakat dalam usaha berbasis pemberdayaan.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <Icon name="Check" size={20} color="var(--color-primary)" className="mt-0.5 flex-shrink-0" />
+                  <span className="font-inter text-gray-700">Menjalin kemitraan dengan beberapa pihak.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <Icon name="Check" size={20} color="var(--color-primary)" className="mt-0.5 flex-shrink-0" />
+                  <span className="font-inter text-gray-700">Meningkatkan kesejahteraan mitra petani dan peternak.</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
