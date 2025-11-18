@@ -53,10 +53,10 @@ const FAQSection = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="font-poppins font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 mb-6">
+          <h2 className="font-poppins font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-900 mb-6">
             Pertanyaan yang Sering Diajukan
           </h2>
-          <p className="font-inter text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="font-inter text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
             Temukan jawaban atas pertanyaan umum tentang BUMDes Gotong Royong Sejahtera, layanan, keanggotaan, dan cara bergabung dengan kami
           </p>
         </div>
@@ -102,7 +102,7 @@ const FAQSection = () => {
                         {faq?.category}
                       </span>
                     </div>
-                    <h3 className="font-poppins font-semibold text-lg text-gray-900 pr-4">
+                    <h3 className="font-poppins font-semibold text-sm sm:text-base lg:text-lg text-gray-900 pr-4">
                       {faq?.question}
                     </h3>
                   </div>
@@ -131,7 +131,7 @@ const FAQSection = () => {
                             return (
                               <div key={pIndex} className="flex items-start space-x-2 mb-2">
                                 <Icon name="Check" size={16} color="var(--color-primary)" className="mt-1 flex-shrink-0" />
-                                <span className="font-inter text-gray-700">{paragraph?.substring(1)?.trim()}</span>
+                                <span className="font-inter text-sm sm:text-base text-gray-700">{paragraph?.substring(1)?.trim()}</span>
                               </div>
                             );
                           }
@@ -139,7 +139,7 @@ const FAQSection = () => {
                           // Handle emoji headers
                           if (paragraph?.match(/^[🌾🏕️🏭💧📋🤝💰📊🎯📱📦💳🎓🏆📅📞🏢🌐]/)) {
                             return (
-                              <h4 key={pIndex} className="font-poppins font-semibold text-gray-900 mt-4 mb-2 first:mt-0">
+                              <h4 key={pIndex} className="font-poppins font-semibold text-sm sm:text-base text-gray-900 mt-4 mb-2 first:mt-0">
                                 {paragraph}
                               </h4>
                             );
@@ -147,7 +147,7 @@ const FAQSection = () => {
                           
                           // Regular paragraphs
                           return (
-                            <p key={pIndex} className="font-inter text-gray-700 leading-relaxed mb-3">
+                            <p key={pIndex} className="font-inter text-sm sm:text-base text-gray-700 leading-relaxed mb-3">
                               {paragraph}
                             </p>
                           );
@@ -169,10 +169,10 @@ const FAQSection = () => {
                 <Icon name="MessageCircle" size={32} color="var(--color-primary)" />
               </div>
             </div>
-            <h3 className="font-poppins font-bold text-2xl text-gray-900 mb-4">
+            <h3 className="font-poppins font-bold text-lg sm:text-xl lg:text-2xl text-gray-900 mb-4">
               Masih Ada Pertanyaan?
             </h3>
-            <p className="font-inter text-gray-600 mb-6 max-w-2xl mx-auto">
+            <p className="font-inter text-xs sm:text-sm lg:text-base text-gray-600 mb-6 max-w-2xl mx-auto">
               Tim customer service kami siap membantu menjawab pertanyaan spesifik Anda. Jangan ragu untuk menghubungi kami kapan saja.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -182,7 +182,7 @@ const FAQSection = () => {
                   const whatsappUrl = `https://wa.me/6283843343328?text=${message}`;
                   window.open(whatsappUrl, '_blank');
                 }}
-                className="flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-inter font-medium transition-colors duration-200"
+                className="flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-inter text-xs sm:text-sm font-medium transition-colors duration-200"
               >
                 <Icon name="MessageCircle" size={20} />
                 <span>Chat WhatsApp</span>

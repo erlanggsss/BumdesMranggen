@@ -8,10 +8,10 @@ const LeadershipTeamSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="font-poppins font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 mb-6">
+          <h2 className="font-poppins font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-900 mb-6">
             Struktur Organisasi
           </h2>
-          <p className="font-inter text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="font-inter text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
             Tim manajemen yang solid dan berpengalaman dalam mengelola BUMDes yang berkomitmen memajukan ekonomi desa dan memberdayakan masyarakat
           </p>
         </div>
@@ -23,8 +23,8 @@ const LeadershipTeamSection = () => {
             <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3 shadow-lg">
               <Icon name="Crown" size={20} color="white" />
             </div>
-            <h4 className="font-poppins font-semibold text-gray-900 mb-1">PENASEHAT</h4>
-            <p className="font-inter text-sm text-gray-600">Darmadi</p>
+            <h4 className="font-poppins font-semibold text-xs sm:text-sm text-gray-900 mb-1">PENASEHAT</h4>
+            <p className="font-inter text-xs sm:text-sm text-gray-600">Darmadi</p>
           </div>
 
           {/* Arrow */}
@@ -39,8 +39,8 @@ const LeadershipTeamSection = () => {
               <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3 shadow-lg">
                 <Icon name="Eye" size={20} color="white" />
               </div>
-              <h4 className="font-poppins font-semibold text-gray-900">PENGAWAS</h4>
-              <p className="font-inter text-sm text-gray-600">Giyatno</p>
+              <h4 className="font-poppins font-semibold text-xs sm:text-sm text-gray-900">PENGAWAS</h4>
+              <p className="font-inter text-xs sm:text-sm text-gray-600">Giyatno</p>
             </div>
 
             {/* Vertical line divider */}
@@ -51,8 +51,8 @@ const LeadershipTeamSection = () => {
               <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3 shadow-lg">
                 <Icon name="Briefcase" size={20} color="white" />
               </div>
-              <h4 className="font-poppins font-semibold text-gray-900">DIREKTUR</h4>
-              <p className="font-inter text-sm text-gray-600">Wiyono, Amd.</p>
+              <h4 className="font-poppins font-semibold text-xs sm:text-sm text-gray-900">DIREKTUR</h4>
+              <p className="font-inter text-xs sm:text-sm text-gray-600">Wiyono, Amd.</p>
             </div>
           </div>
 
@@ -68,8 +68,8 @@ const LeadershipTeamSection = () => {
               <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3 shadow-lg">
                 <Icon name="FileText" size={20} color="white" />
               </div>
-              <h4 className="font-poppins font-semibold text-gray-900">SEKRETARIS</h4>
-              <p className="font-inter text-sm text-gray-600">Eva Dwi R.</p>
+              <h4 className="font-poppins font-semibold text-xs sm:text-sm text-gray-900">SEKRETARIS</h4>
+              <p className="font-inter text-xs sm:text-sm text-gray-600">Eva Dwi R.</p>
             </div>
 
             {/* Vertical line divider */}
@@ -80,8 +80,8 @@ const LeadershipTeamSection = () => {
               <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3 shadow-lg">
                 <Icon name="Wallet" size={20} color="white" />
               </div>
-              <h4 className="font-poppins font-semibold text-gray-900">BENDAHARA</h4>
-              <p className="font-inter text-sm text-gray-600">Triyono</p>
+              <h4 className="font-poppins font-semibold text-xs sm:text-sm text-gray-900">BENDAHARA</h4>
+              <p className="font-inter text-xs sm:text-sm text-gray-600">Triyono</p>
             </div>
           </div>
 
@@ -97,8 +97,8 @@ const LeadershipTeamSection = () => {
               <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3 shadow-lg">
                 <Icon name="Users" size={20} color="white" />
               </div>
-              <h4 className="font-poppins font-semibold text-gray-900 text-sm">KEPALA/MANAJER<br />BIDANG USAHA 1</h4>
-              <p className="font-inter text-sm text-gray-600 mt-1">Andi Setiawan, S.P</p>
+              <h4 className="font-poppins font-semibold text-xs sm:text-sm text-gray-900">KEPALA/MANAJER<br />BIDANG USAHA 1</h4>
+              <p className="font-inter text-xs sm:text-sm text-gray-600 mt-1">Andi Setiawan, S.P</p>
             </div>
 
             {/* Vertical line divider */}
@@ -109,15 +109,15 @@ const LeadershipTeamSection = () => {
               <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3 shadow-lg">
                 <Icon name="Users" size={20} color="white" />
               </div>
-              <h4 className="font-poppins font-semibold text-gray-900 text-sm">KEPALA/MANAJER<br />BIDANG USAHA 2</h4>
-              <p className="font-inter text-sm text-gray-600 mt-1">Muh. Afif Abdilah</p>
+              <h4 className="font-poppins font-semibold text-xs sm:text-sm text-gray-900">KEPALA/MANAJER<br />BIDANG USAHA 2</h4>
+              <p className="font-inter text-xs sm:text-sm text-gray-600 mt-1">Muh. Afif Abdilah</p>
             </div>
           </div>
         </div>
 
         {/* Leadership Values */}
         <div className="mt-16 text-center">
-          <h3 className="font-poppins font-bold text-2xl sm:text-3xl text-gray-900 mb-8">
+          <h3 className="font-poppins font-bold text-lg sm:text-xl lg:text-2xl text-gray-900 mb-8">
             Nilai-Nilai Kepemimpinan Kami
           </h3>
           
@@ -126,8 +126,8 @@ const LeadershipTeamSection = () => {
               <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto">
                 <Icon name="Heart" size={28} color="var(--color-primary)" />
               </div>
-              <h4 className="font-poppins font-semibold text-xl text-gray-900">Integritas</h4>
-              <p className="font-inter text-gray-600">
+              <h4 className="font-poppins font-semibold text-base sm:text-lg text-gray-900">Integritas</h4>
+              <p className="font-inter text-sm sm:text-base text-gray-600">
                 Berkomitmen pada transparansi dan akuntabilitas dalam setiap keputusan dan tindakan
               </p>
             </div>
@@ -136,8 +136,8 @@ const LeadershipTeamSection = () => {
               <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto">
                 <Icon name="Lightbulb" size={28} color="var(--color-primary)" />
               </div>
-              <h4 className="font-poppins font-semibold text-xl text-gray-900">Inovasi</h4>
-              <p className="font-inter text-gray-600">
+              <h4 className="font-poppins font-semibold text-base sm:text-lg text-gray-900">Inovasi</h4>
+              <p className="font-inter text-sm sm:text-base text-gray-600">
                 Mengembangkan solusi kreatif dan teknologi modern untuk kemajuan ekonomi desa
               </p>
             </div>
@@ -146,8 +146,8 @@ const LeadershipTeamSection = () => {
               <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto">
                 <Icon name="Users" size={28} color="var(--color-primary)" />
               </div>
-              <h4 className="font-poppins font-semibold text-xl text-gray-900">Kolaborasi</h4>
-              <p className="font-inter text-gray-600">
+              <h4 className="font-poppins font-semibold text-base sm:text-lg text-gray-900">Kolaborasi</h4>
+              <p className="font-inter text-sm sm:text-base text-gray-600">
                 Membangun kemitraan yang kuat dengan masyarakat dan stakeholder untuk kemajuan bersama
               </p>
             </div>

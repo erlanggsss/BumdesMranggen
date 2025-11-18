@@ -7,12 +7,16 @@ const AnchorNavigation = ({
 }) => {
   const [activeSection, setActiveSection] = useState('beranda');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStartY, setDragStartY] = useState(0);
+  const [dragOffset, setDragOffset] = useState(0);
 
   const navigationItems = [
     { label: "Beranda", href: "#beranda", icon: "Home" },
-    { label: "Tentang Kami", href: "#tentang", icon: "Users" },
+    { label: "Tentang Kami", href: "#tentang", icon: "BookOpen" },
     { label: "Unit Usaha", href: "#unit-usaha", icon: "Building2" },
-    { label: "Kepemimpinan", href: "#struktur-organisasi", icon: "People" },
+    { label: "Struktur Organisasi", href: "#struktur-organisasi", icon: "Users" },
     { label: "Kontak", href: "#kontak", icon: "Phone" },
     { label: "FAQs", href: "#faq", icon: "HelpCircle" }
   ];
@@ -23,7 +27,7 @@ const AnchorNavigation = ({
         document.querySelector(item?.href)
       )?.filter(Boolean);
 
-      const scrollPosition = window.scrollY + 100;
+      const scrollPosition = window.scrollY + 200;
 
       for (let i = sections?.length - 1; i >= 0; i--) {
         const section = sections?.[i];
@@ -39,46 +43,162 @@ const AnchorNavigation = ({
     handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [navigationItems]);
+
+  // Function to manually update active section
+  const updateActiveSection = () => {
+    const sections = navigationItems?.map(item => 
+      document.querySelector(item?.href)
+    )?.filter(Boolean);
+
+    const scrollPosition = window.scrollY + 200;
+
+    for (let i = sections?.length - 1; i >= 0; i--) {
+      const section = sections?.[i];
+      if (section && section?.offsetTop <= scrollPosition) {
+        const sectionId = section?.id;
+        setActiveSection(sectionId);
+        break;
+      }
+    }
+  };
 
   // Close mobile menu when clicking outside or on scroll
   useEffect(() => {
     if (isMobileMenuOpen) {
       const handleClickOutside = (event) => {
         const nav = document.querySelector('nav');
-        if (nav && !nav?.contains(event?.target)) {
-          setIsMobileMenuOpen(false);
+        const menuSheet = event.target?.closest('[data-menu-sheet]');
+        
+        // Only close if clicking outside nav and outside menu sheet
+        if (nav && !nav?.contains(event?.target) && !menuSheet) {
+          setIsClosing(true);
+          setTimeout(() => {
+            setIsMobileMenuOpen(false);
+            setIsClosing(false);
+          }, 350);
         }
       };
 
       const handleScroll = () => {
-        setIsMobileMenuOpen(false);
+        setIsClosing(true);
+        setTimeout(() => {
+          setIsMobileMenuOpen(false);
+          setIsClosing(false);
+        }, 350);
       };
 
-      document.addEventListener('mousedown', handleClickOutside);
+      // Add small delay to prevent immediate closure
+      const clickListener = setTimeout(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+      }, 100);
+
       window.addEventListener('scroll', handleScroll);
 
       return () => {
+        clearTimeout(clickListener);
         document.removeEventListener('mousedown', handleClickOutside);
         window.removeEventListener('scroll', handleScroll);
       };
     }
   }, [isMobileMenuOpen]);
 
+  // Attach drag events on document level for better tracking
+  useEffect(() => {
+    if (!isDragging) return;
+
+    const handleMove = (e) => handleDragMove(e);
+    const handleEnd = () => handleDragEnd();
+
+    document.addEventListener('mousemove', handleMove);
+    document.addEventListener('mouseup', handleEnd);
+    document.addEventListener('touchmove', handleMove, { passive: false });
+    document.addEventListener('touchend', handleEnd);
+
+    return () => {
+      document.removeEventListener('mousemove', handleMove);
+      document.removeEventListener('mouseup', handleEnd);
+      document.removeEventListener('touchmove', handleMove);
+      document.removeEventListener('touchend', handleEnd);
+    };
+  }, [isDragging, dragStartY, dragOffset]);
+
   const handleNavClick = (href) => {
-    const element = document.querySelector(href);
-    if (element) {
-      const offsetTop = element?.offsetTop - 80;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: 'smooth'
-      });
-    }
-    setIsMobileMenuOpen(false);
+    // Trigger slide down animation before closing
+    setIsClosing(true);
+    
+    // Navigate during animation (immediate) with better offset
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      if (element) {
+        const offsetTop = element?.offsetTop - 150; // Account for fixed nav + menu overlay
+        window.scrollTo({
+          top: Math.max(0, offsetTop),
+          behavior: 'smooth'
+        });
+
+        // Manually update active section multiple times during smooth scroll
+        const scrollUpdateInterval = setInterval(() => {
+          updateActiveSection();
+        }, 100);
+
+        // Stop updating after smooth scroll animation completes (typically 500-800ms)
+        setTimeout(() => {
+          clearInterval(scrollUpdateInterval);
+          updateActiveSection(); // Final update to ensure correct section
+        }, 1000);
+      }
+    }, 50); // Small delay to ensure DOM is ready
+    
+    // Close menu after animation completes
+    setTimeout(() => {
+      setIsMobileMenuOpen(false);
+      setIsClosing(false);
+    }, 350); // Slightly shorter than animation
   };
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  // Improved drag handlers with better state management
+  const handleDragStart = (e) => {
+    setIsDragging(true);
+    const startY = e.type.includes('touch') ? e.touches?.[0]?.clientY : e.clientY;
+    setDragStartY(startY);
+    setDragOffset(0);
+  };
+
+  const handleDragMove = (e) => {
+    if (!isDragging || dragStartY === 0) return;
+    
+    e.preventDefault();
+    const currentY = e.type.includes('touch') ? e.touches?.[0]?.clientY : e.clientY;
+    const offset = currentY - dragStartY;
+    
+    // Only allow dragging downwards with minimum threshold
+    if (offset > 0) {
+      setDragOffset(offset);
+    }
+  };
+
+  const handleDragEnd = () => {
+    // If dragged more than 80px downward, close the menu
+    if (dragOffset > 80) {
+      setIsClosing(true);
+      setTimeout(() => {
+        setIsMobileMenuOpen(false);
+        setIsClosing(false);
+        setIsDragging(false);
+        setDragStartY(0);
+        setDragOffset(0);
+      }, 350);
+    } else {
+      // Reset drag state if didn't drag enough
+      setIsDragging(false);
+      setDragStartY(0);
+      setDragOffset(0);
+    }
   };
 
   return (
@@ -128,42 +248,126 @@ const AnchorNavigation = ({
         </div>
       </nav>
       
-      {/* Mobile Menu Overlay - Separate from nav for proper z-index */}
+      {/* Mobile Menu Sheet - Slides up from bottom (half screen) */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-[60] lg:hidden">
-          {/* Background overlay */}
+        <div 
+          className="fixed inset-0 z-40 lg:hidden"
+          style={{ 
+            pointerEvents: isClosing ? 'none' : 'auto',
+            opacity: isClosing ? 0 : 1,
+            transition: isClosing ? 'opacity 0.35s ease-in' : 'opacity 0.3s ease-out'
+          }} 
+          data-menu-sheet
+        >
+          {/* Background overlay - Animated fade in/out */}
           <div 
             className="fixed inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={() => {
+              setIsClosing(true);
+              setTimeout(() => {
+                setIsMobileMenuOpen(false);
+                setIsClosing(false);
+              }, 350);
+            }}
             aria-hidden="true"
+            style={{
+              animation: isClosing ? 'fadeOut 0.35s ease-in forwards' : 'fadeIn 0.3s ease-out',
+              pointerEvents: isClosing ? 'none' : 'auto'
+            }}
           />
           
-          {/* Menu content */}
-          <div className="fixed top-14 sm:top-16 left-0 right-0 bottom-0 bg-white shadow-xl overflow-y-auto">
-            <div className="px-4 py-6 space-y-2">
+          {/* Menu content - Slides up from bottom (50vh) or down when closing */}
+          <div 
+            className="fixed bottom-0 left-0 right-0 max-h-[50vh] bg-white shadow-2xl rounded-t-3xl overflow-hidden"
+            style={{
+              animation: isClosing 
+                ? 'slideDown 0.35s cubic-bezier(0.68, 0.28, 0.68, 1) forwards' 
+                : 'slideUp 0.4s cubic-bezier(0.32, 0.72, 0, 1)',
+              maxHeight: '50vh',
+              pointerEvents: isClosing ? 'none' : 'auto',
+              transform: isDragging && dragOffset > 0 ? `translateY(${dragOffset}px)` : 'translateY(0)',
+              transition: !isDragging && dragStartY === 0 ? 'transform 0.2s ease-out' : 'none'
+            }}
+            data-menu-sheet
+          >
+            {/* Handle bar for mobile indication - Draggable */}
+            <div 
+              className="flex justify-center pt-4 pb-2 cursor-grab active:cursor-grabbing select-none"
+              onMouseDown={handleDragStart}
+              onTouchStart={handleDragStart}
+              style={{
+                userSelect: 'none',
+                WebkitUserSelect: 'none'
+              }}
+            >
+              <div className="w-12 h-1 bg-gray-300 rounded-full transition-colors" />
+            </div>
+
+            {/* Menu items */}
+            <div className="px-4 pb-4 space-y-1">
               {navigationItems?.map((item) => {
                 const isActive = activeSection === item?.href?.substring(1);
                 return (
                   <button
                     key={item?.href}
                     onClick={() => handleNavClick(item?.href)}
-                    className={`w-full flex items-center space-x-4 px-4 py-4 rounded-lg text-left font-inter font-medium text-base transition-all duration-250 min-h-12 ${
+                    className={`w-full flex items-center space-x-3 px-3 py-3 rounded-lg text-left font-inter font-medium text-sm transition-all duration-250 min-h-10 ${
                       isActive 
                         ? 'text-primary bg-primary/10 border border-primary/20' :'text-gray-700 hover:text-primary hover:bg-gray-50 border border-transparent'
                     }`}
                   >
-                    <Icon name={item?.icon} size={20} />
+                    <Icon name={item?.icon} size={18} />
                     <span>{item?.label}</span>
                   </button>
                 );
               })}
             </div>
-            
-            {/* Additional padding at bottom for better UX */}
-            <div className="h-16" />
           </div>
         </div>
       )}
+
+      {/* Add custom animations to tailwind.css if not already present */}
+      <style>{`
+        @keyframes slideUp {
+          from {
+            transform: translateY(100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+
+        @keyframes slideDown {
+          from {
+            transform: translateY(0);
+            opacity: 1;
+          }
+          to {
+            transform: translateY(100%);
+            opacity: 0;
+          }
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes fadeOut {
+          from {
+            opacity: 1;
+          }
+          to {
+            opacity: 0;
+          }
+        }
+      `}</style>
     </>
   );
 };

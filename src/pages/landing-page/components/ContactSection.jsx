@@ -97,25 +97,38 @@ const ContactSection = () => {
       
       setSubmitStatus('success');
       
-      // Send WhatsApp message for urgent requests
+      // Send WhatsApp message for urgent requests or preferred contact
       if (formData?.urgency === 'urgent' || formData?.preferredContact === 'whatsapp') {
-        const message = encodeURIComponent(
-          `Halo! Saya ${formData?.name} (${formData?.visitorType}). ${formData?.message}`
-        );
-        const whatsappUrl = `https://wa.me/6283843343328?text=${message}`;
+        // Build comprehensive message with all form details
+        const messageText = `*Halo BUMDes Gotong Royong Sejahtera*
+
+        Nama: ${formData?.name}
+        Kategori: ${formData?.visitorType}
+        ${formData?.organization ? `Organisasi: ${formData?.organization}\n` : ''}Topik: ${formData?.subject || '-'}
+        Urgensi: ${formData?.urgency === 'low' ? 'Tidak Mendesak' : formData?.urgency === 'normal' ? 'Normal' : formData?.urgency === 'high' ? 'Mendesak' : 'Sangat Mendesak'}
+
+        *Pesan:*
+        ${formData?.message}`;
+        
+        const encodedMessage = encodeURIComponent(messageText);
+        const whatsappUrl = `https://wa.me/6283843343328?text=${encodedMessage}`;
         window.open(whatsappUrl, '_blank');
       }
 
-      // Reset form
-      setFormData({
-        visitorType: '',
-        name: '',
-        organization: '',
-        subject: '',
-        message: '',
-        preferredContact: 'whatsapp',
-        urgency: 'normal'
-      });
+      // Reset form after delay to show success message
+      setTimeout(() => {
+        setFormData({
+          visitorType: '',
+          name: '',
+          phone: '',
+          organization: '',
+          subject: '',
+          message: '',
+          preferredContact: 'whatsapp',
+          urgency: 'normal'
+        });
+        setSubmitStatus(null);
+      }, 3000);
 
     } catch (error) {
       setSubmitStatus('error');
@@ -139,10 +152,10 @@ const ContactSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="font-poppins font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 mb-6">
+          <h2 className="font-poppins font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-900 mb-6">
             Hubungi Kami
           </h2>
-          <p className="font-inter text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="font-inter text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
             Kami siap membantu menjawab pertanyaan dan melayani kebutuhan Anda. Pilih cara komunikasi yang paling sesuai dengan kebutuhan Anda.
           </p>
         </div>
@@ -150,7 +163,7 @@ const ContactSection = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="bg-surface rounded-3xl p-8 shadow-lg">
-            <h3 className="font-poppins font-bold text-2xl text-gray-900 mb-6">
+            <h3 className="font-poppins font-bold text-lg sm:text-xl lg:text-2xl text-gray-900 mb-6">
               Kirim Pesan
             </h3>
 
@@ -158,7 +171,7 @@ const ContactSection = () => {
               <div className="bg-green-100 border border-green-200 rounded-xl p-4 mb-6">
                 <div className="flex items-center space-x-2">
                   <Icon name="CheckCircle" size={20} color="#10B981" />
-                  <p className="font-inter text-green-800">
+                  <p className="font-inter text-xs sm:text-sm text-green-800">
                     Pesan berhasil dikirim! Kami akan merespons dalam waktu {getResponseTime()}.
                   </p>
                 </div>
@@ -169,7 +182,7 @@ const ContactSection = () => {
               <div className="bg-red-100 border border-red-200 rounded-xl p-4 mb-6">
                 <div className="flex items-center space-x-2">
                   <Icon name="AlertCircle" size={20} color="#EF4444" />
-                  <p className="font-inter text-red-800">
+                  <p className="font-inter text-xs sm:text-sm text-red-800">
                     Terjadi kesalahan. Silakan coba lagi atau hubungi kami via WhatsApp.
                   </p>
                 </div>
@@ -225,7 +238,7 @@ const ContactSection = () => {
 
               {/* Message */}
               <div>
-                <label className="block font-inter font-medium text-gray-900 mb-2">
+                <label className="block font-inter font-medium text-xs sm:text-sm text-gray-900 mb-2">
                   Pesan <span className="text-red-500">*</span>
                 </label>
                 <textarea
@@ -234,13 +247,13 @@ const ContactSection = () => {
                   value={formData?.message}
                   onChange={(e) => handleInputChange('message', e?.target?.value)}
                   placeholder="Jelaskan pertanyaan atau kebutuhan Anda secara detail..."
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl font-inter text-base focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-xl font-inter text-sm focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
                 />
               </div>
 
               {/* Preferred Contact Method */}
               <div>
-                <label className="block font-inter font-medium text-gray-900 mb-3">
+                <label className="block font-inter font-medium text-xs sm:text-sm text-gray-900 mb-3">
                   Metode Kontak Preferensi
                 </label>
                 <div className="grid sm:grid-cols-3 gap-3">
@@ -249,7 +262,7 @@ const ContactSection = () => {
                       key={method?.value}
                       type="button"
                       onClick={() => handleInputChange('preferredContact', method?.value)}
-                      className={`flex items-center space-x-2 p-3 rounded-xl border-2 transition-all duration-200 ${
+                      className={`flex items-center space-x-2 p-3 rounded-xl border-2 transition-all duration-200 text-xs sm:text-sm ${
                         formData?.preferredContact === method?.value
                           ? 'border-primary bg-primary/10 text-primary' :'border-gray-200 hover:border-gray-300'
                       }`}
@@ -274,7 +287,7 @@ const ContactSection = () => {
               <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
                 <div className="flex items-center space-x-2">
                   <Icon name="Clock" size={20} color="#3B82F6" />
-                  <p className="font-inter text-blue-800">
+                  <p className="font-inter text-xs sm:text-sm text-blue-800">
                     <strong>Estimasi Respons:</strong> {getResponseTime()}
                   </p>
                 </div>
@@ -299,7 +312,7 @@ const ContactSection = () => {
           <div className="space-y-8">
             {/* Quick Contact */}
             <div className="bg-primary rounded-3xl p-8 text-white shadow-lg">
-              <h3 className="font-poppins font-bold text-2xl mb-6">
+              <h3 className="font-poppins font-bold text-lg sm:text-xl lg:text-2xl text-white mb-6">
                 Kontak Langsung
               </h3>
               
@@ -309,14 +322,14 @@ const ContactSection = () => {
                     <Icon name="MessageCircle" size={24} color="white" />
                   </div>
                   <div>
-                    <h4 className="font-poppins font-semibold mb-2">WhatsApp 24/7</h4>
-                    <p className="text-white/90 mb-3">Respons tercepat untuk pertanyaan mendesak</p>
+                    <h4 className="font-poppins font-semibold text-sm sm:text-base mb-2">WhatsApp 24/7</h4>
+                    <p className="font-inter text-xs sm:text-sm text-white/90 mb-3">Respons tercepat untuk pertanyaan mendesak</p>
                     <Button
                       variant="outline"
                       size="sm"
                       onClick={() => {
                         const message = encodeURIComponent('Halo! Saya ingin mengetahui lebih lanjut tentang BUMDes Gotong Royong Sejahtera.');
-                        const whatsappUrl = `https://wa.me/6281293603711?text=${message}`;
+                        const whatsappUrl = `https://wa.me/6283843343328?text=${message}`;
                         window.open(whatsappUrl, '_blank');
                       }}
                       className="bg-white text-primary hover:bg-gray-50"
@@ -331,8 +344,8 @@ const ContactSection = () => {
                     <Icon name="Mail" size={24} color="white" />
                   </div>
                   <div>
-                    <h4 className="font-poppins font-semibold mb-2">Email Resmi</h4>
-                    <p className="text-white/90 mb-3">Untuk komunikasi formal dan dokumentasi</p>
+                    <h4 className="font-poppins font-semibold text-sm sm:text-base mb-2">Email Resmi</h4>
+                    <p className="font-inter text-xs sm:text-sm text-white/90 mb-3">Untuk komunikasi formal dan dokumentasi</p>
                     <Button
                       variant="outline"
                       size="sm"
@@ -348,29 +361,29 @@ const ContactSection = () => {
 
             {/* Office Hours */}
             <div className="bg-surface rounded-3xl p-8 shadow-lg">
-              <h3 className="font-poppins font-bold text-2xl text-gray-900 mb-6">
+              <h3 className="font-poppins font-bold text-lg sm:text-xl lg:text-2xl text-gray-900 mb-6">
                 Jam Operasional
               </h3>
               
               <div className="space-y-4">
                 <div className="flex items-center justify-between py-3 border-b border-gray-200">
-                  <span className="font-inter font-medium text-gray-900">Senin - Jumat</span>
-                  <span className="font-inter text-gray-600">08:00 - 16:00 WIB</span>
+                  <span className="font-inter font-medium text-xs sm:text-sm text-gray-900">Senin - Jumat</span>
+                  <span className="font-inter text-xs sm:text-sm text-gray-600">08:00 - 16:00 WIB</span>
                 </div>
                 <div className="flex items-center justify-between py-3 border-b border-gray-200">
-                  <span className="font-inter font-medium text-gray-900">Sabtu</span>
-                  <span className="font-inter text-gray-600">08:00 - 12:00 WIB</span>
+                  <span className="font-inter font-medium text-xs sm:text-sm text-gray-900">Sabtu</span>
+                  <span className="font-inter text-xs sm:text-sm text-gray-600">08:00 - 12:00 WIB</span>
                 </div>
                 <div className="flex items-center justify-between py-3 border-b border-gray-200">
-                  <span className="font-inter font-medium text-gray-900">Minggu</span>
-                  <span className="font-inter text-gray-600">Tutup</span>
+                  <span className="font-inter font-medium text-xs sm:text-sm text-gray-900">Minggu</span>
+                  <span className="font-inter text-xs sm:text-sm text-gray-600">Tutup</span>
                 </div>
               </div>
 
               <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
                 <div className="flex items-start space-x-2">
                   <Icon name="Info" size={20} color="#F59E0B" className="flex-shrink-0 mt-0.5" />
-                  <p className="font-inter text-yellow-800 text-sm">
+                  <p className="font-inter text-xs sm:text-sm text-yellow-800">
                     <strong>Catatan:</strong> Untuk keperluan mendesak di luar jam operasional, silakan hubungi WhatsApp kami yang tersedia 24/7.
                   </p>
                 </div>
@@ -379,7 +392,7 @@ const ContactSection = () => {
 
             {/* Location */}
             <div className="bg-white rounded-3xl p-8 shadow-lg">
-              <h3 className="font-poppins font-bold text-2xl text-gray-900 mb-6">
+              <h3 className="font-poppins font-bold text-lg sm:text-xl lg:text-2xl text-gray-900 mb-6">
                 Lokasi Kantor
               </h3>
               
@@ -387,8 +400,8 @@ const ContactSection = () => {
                 <div className="flex items-start space-x-3">
                   <Icon name="MapPin" size={20} color="var(--color-primary)" className="mt-1" />
                   <div>
-                    <p className="font-inter font-medium text-gray-900">Alamat Lengkap</p>
-                    <p className="font-inter text-gray-600">
+                    <p className="font-inter font-medium text-xs sm:text-sm text-gray-900">Alamat Lengkap</p>
+                    <p className="font-inter text-xs sm:text-sm text-gray-600">
                       Jl. Sukoharjo, Kedunggandu<br />
                       Mranggen, Kec. Polokarto, Kabupaten Sukoharjo, Jawa Tengah 57513
                     </p>

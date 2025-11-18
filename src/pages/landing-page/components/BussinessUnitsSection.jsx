@@ -41,8 +41,8 @@ const BusinessUnitsSection = () => {
           <h2 className="font-poppins font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-900 mb-4 sm:mb-6">
             Unit Usaha Kami
           </h2>
-          <p className="font-inter text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-2 sm:px-0">
-            Dua pilar utama BUMDes Gotong Royong Sejahtera menjadi fondasi dalam membangun ekonomi lokal yang mandiri dan berdaya saing.          </p>
+          <p className="font-inter text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto px-2 sm:px-0">
+            Dua pilar utama BUMDes Gotong Royong Sejahtera menjadi fondasi dalam membangun ekonomi lokal yang mandiri dan berdaya saing.          </p>
         </div>
 
         {/* Business Units Grid - Responsive layout */}
@@ -96,10 +96,10 @@ const BusinessUnitsSection = () => {
         {/* Call to Action - Responsive design */}
         <div className="text-center mt-12 sm:mt-16">
           <div className="bg-surface p-6 sm:p-8 rounded-2xl sm:rounded-3xl">
-            <h3 className="font-poppins font-bold text-xl sm:text-2xl text-gray-900 mb-4">
+            <h3 className="font-poppins font-bold text-lg sm:text-xl lg:text-2xl text-gray-900 mb-4">
               Tertarik Bergabung dengan Unit Usaha Kami?
             </h3>
-            <p className="font-inter text-gray-600 mb-6 max-w-2xl mx-auto text-sm sm:text-base px-2 sm:px-0">
+            <p className="font-inter text-sm sm:text-base text-gray-600 mb-6 max-w-2xl mx-auto px-2 sm:px-0">
               Kami selalu terbuka untuk kemitraan dan partisipasi masyarakat dalam mengembangkan ekonomi desa bersama-sama
             </p>
             <Button

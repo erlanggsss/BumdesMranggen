@@ -65,29 +65,27 @@ const FooterSection = () => {
             {/* Company Info */}
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
-                  <Icon name="Leaf" size={28} color="white" />
-                </div>
+                <img src="/favicon.png" alt="BUMDes Logo" className="w-12 h-12" />
                 <div>
                   <h3 className="font-poppins font-bold text-xl text-white">BUMDes</h3>
-                  <p className="font-inter text-sm text-gray-300">Gotong Royong Sejahtera</p>
+                  <p className="font-inter text-xs sm:text-sm text-gray-300">Gotong Royong Sejahtera</p>
                 </div>
               </div>
               
-              <p className="font-inter text-gray-300 leading-relaxed mb-6 text-sm">
+              <p className="font-inter text-xs sm:text-sm text-gray-300 leading-relaxed mb-6">
                 BUMDes Gotong Royong Sejahtera mengelola pertanian dan peternakan dengan standar profesional dan komitmen pemberdayaan masyarakat. Kami bermitra terpercaya bagi petani dan peternak, menggerakkan ekonomi desa melalui inovasi berkelanjutan dan semangat gotong royong menuju kesejahteraan bersama.
               </p>
             </div>
 
             {/* Quick Links */}
             <div className="lg:pl-20">
-              <h4 className="font-poppins font-semibold text-white mb-6">Navigasi Cepat</h4>
+              <h4 className="font-poppins font-semibold text-sm sm:text-base text-white mb-6">Navigasi Cepat</h4>
               <ul className="space-y-3">
                 {quickLinks?.map((link) => (
                   <li key={link?.name}>
                     <button
                       onClick={() => handleScrollToSection(link?.href)}
-                      className="font-inter text-gray-300 hover:text-primary transition-colors duration-200 text-left text-sm"
+                      className="font-inter text-xs sm:text-sm text-gray-300 hover:text-primary transition-colors duration-200 text-left"
                     >
                       {link?.name}
                     </button>
@@ -98,13 +96,13 @@ const FooterSection = () => {
 
             {/* Services */}
             <div className="lg:pl-12">
-              <h4 className="font-poppins font-semibold text-white mb-6">Layanan Kami</h4>
+              <h4 className="font-poppins font-semibold text-sm sm:text-base text-white mb-6">Layanan Kami</h4>
               <ul className="space-y-3">
                 {services?.map((service) => (
                   <li key={service?.name}>
                     <button
                       onClick={() => handleScrollToSection(service?.href)}
-                      className="font-inter text-gray-300 hover:text-primary transition-colors duration-200 text-left text-sm"
+                      className="font-inter text-xs sm:text-sm text-gray-300 hover:text-primary transition-colors duration-200 text-left"
                     >
                       {service?.name}
                     </button>
@@ -115,7 +113,7 @@ const FooterSection = () => {
 
             {/* Contact Info */}
             <div>
-              <h4 className="font-poppins font-semibold text-white mb-6">Informasi Kontak</h4>
+              <h4 className="font-poppins font-semibold text-sm sm:text-base text-white mb-6">Informasi Kontak</h4>
               <div className="space-y-4">
                 {contactInfo?.map((info, index) => (
                   <div key={index} className="flex items-start space-x-3">
@@ -123,10 +121,10 @@ const FooterSection = () => {
                       <Icon name={info?.icon} size={16} color="var(--color-primary)" />
                     </div>
                     <div>
-                      <h5 className="font-inter font-medium text-white text-sm mb-1">{info?.title}</h5>
+                      <h5 className="font-inter font-medium text-white text-xs sm:text-sm mb-1">{info?.title}</h5>
                       <div className="space-y-1">
                         {info?.content?.split('\n')?.map((line, lineIndex) => (
-                          <p key={lineIndex} className="font-inter text-gray-300 text-sm">
+                          <p key={lineIndex} className="font-inter text-xs sm:text-sm text-gray-300">
                             {line}
                           </p>
                         ))}
@@ -159,7 +157,7 @@ const FooterSection = () => {
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             {/* Copyright */}
             <div className="text-center md:text-left">
-              <p className="font-inter text-gray-400 text-sm">
+              <p className="font-inter text-xs sm:text-sm text-gray-400">
                 © {currentYear} BUMDes Gotong Royong Sejahtera. Seluruh hak cipta dilindungi undang-undang.
               </p>
             </div>
