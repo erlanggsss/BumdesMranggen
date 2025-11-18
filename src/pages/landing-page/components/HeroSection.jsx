@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from '../../../components/AppImage';
 import Button from '../../../components/ui/Button';
 import Icon from '../../../components/AppIcon';
 
@@ -20,24 +19,19 @@ const HeroSection = () => {
 
   return (
     <section id="beranda" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-14 sm:pt-16 lg:pt-18">
-      {/* Background Image with responsive optimization */}
-      <div className="absolute inset-0 z-0">
-        <picture>
-          <source
-            media="(max-width: 767px)"
-            srcSet="https://images.unsplash.com/photo-1572268806390-e674a8342124?w=800&h=1200&fit=crop&crop=center" />
-
-          <source
-            media="(max-width: 1023px)"
-            srcSet="https://images.unsplash.com/photo-1572268806390-e674a8342124?w=1200&h=800&fit=crop&crop=center" />
-
-          <Image
-            src="https://images.unsplash.com/photo-1572268806390-e674a8342124"
-            alt="Beautiful Indonesian village landscape with traditional houses, green rice fields, and mountains in the background during golden hour"
-            className="w-full h-full object-cover"
-            loading="eager" />
-
-        </picture>
+      {/* Background Video with overlay */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/videos/bumdesprofile.mp4" type="video/mp4" />
+          {/* Fallback untuk browser yang tidak support video */}
+          Your browser does not support the video tag.
+        </video>
 
         <div className="absolute inset-0 bg-black/40"></div>
       </div>

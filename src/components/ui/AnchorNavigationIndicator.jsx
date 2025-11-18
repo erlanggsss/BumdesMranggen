@@ -3,7 +3,8 @@ import Icon from '../AppIcon';
 
 const AnchorNavigation = ({ 
   isCollapsed = false,
-  className = ""
+  className = "",
+  onMenuStateChange = null
 }) => {
   const [activeSection, setActiveSection] = useState('beranda');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -20,6 +21,13 @@ const AnchorNavigation = ({
     { label: "Kontak", href: "#kontak", icon: "Phone" },
     { label: "FAQs", href: "#faq", icon: "HelpCircle" }
   ];
+
+  // Notify parent component when menu state changes
+  useEffect(() => {
+    if (onMenuStateChange) {
+      onMenuStateChange(isMobileMenuOpen);
+    }
+  }, [isMobileMenuOpen, onMenuStateChange]);
 
   useEffect(() => {
     const handleScroll = () => {

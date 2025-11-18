@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AnchorNavigation from '../../components/ui/AnchorNavigationIndicator';
 import WhatsAppFloatingButton from '../../components/ui/WhatsAppFloatingButton';
 import ScrollProgressIndicator from '../../components/ui/ScrollProgressIndicator';
@@ -13,12 +13,14 @@ import ContactSection from './components/ContactSection';
 import FooterSection from './components/FooterSection';
 
 const LandingPage = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Fixed Navigation Components */}
       <ScrollProgressIndicator />
-      <AnchorNavigation />
-      <WhatsAppFloatingButton phoneNumber="6283843343328" />
+      <AnchorNavigation onMenuStateChange={setIsMobileMenuOpen} />
+      <WhatsAppFloatingButton phoneNumber="6283843343328" isMenuOpen={isMobileMenuOpen} />
 
       {/* Main Content Sections */}
       <main>

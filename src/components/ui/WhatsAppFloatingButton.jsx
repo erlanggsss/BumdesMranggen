@@ -3,7 +3,8 @@ import Icon from '../AppIcon';
 
 const WhatsAppFloatingButton = ({ 
   phoneNumber = "6283843343328",
-  className = ""
+  className = "",
+  isMenuOpen = false
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -16,7 +17,11 @@ const WhatsAppFloatingButton = ({
   };
 
   return (
-    <div className={`fixed bottom-6 right-6 z-50 ${className}`}>
+    <div className={`fixed bottom-6 right-6 z-40 transition-all duration-300 ${
+      isMenuOpen 
+        ? 'opacity-0 translate-y-4 pointer-events-none' 
+        : 'opacity-100 translate-y-0'
+    } ${className}`}>
       <button
         onClick={handleWhatsAppClick}
         onMouseEnter={() => setIsHovered(true)}
